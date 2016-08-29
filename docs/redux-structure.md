@@ -65,7 +65,7 @@
 
 * `newReview`
   0. invoked from `ReviewForm` `onSubmit`
-  0. `POST /api/businesses/:businessId/reviews` is called with state.newReviewInput passed as data parameter.
+  0. `POST /api/businesses/:businessId/reviews` is called with state.newReviewForm passed as data parameter.
   0. `receiveNewReview` is set as the success callback.
 
 ### Review API Response Actions

@@ -3,7 +3,7 @@
 ## users
 
  - has many `reviews`
- - BONUS: has many `friends`
+ - Bonus Feature: has many `friends`
 
 column name       | data type | details
 ------------------|-----------|-----------------------
@@ -30,8 +30,9 @@ lng             | float     | not null
 
 ## reviews
 
- - has one `user`
- - has one `business`
+ - belongs_to `user`
+ - belongs_to `business`
+ - Bonus Feature: can either be useful, funny, or cool; each represents an integer
 
  column name     | data type | details
  ----------------|-----------|-----------------------
@@ -50,6 +51,9 @@ id          | integer   | not null, primary key
 name        | string    | not null
 
 ## taggings
+
+ - belongs_to `tag`
+ - belongs_to `business`
 
 column name | data type | details
 ------------|-----------|-----------------------
