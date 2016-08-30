@@ -10,33 +10,42 @@ class SessionForm extends React.Component{
       password: ""
     };
 
-    // this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidUpdate(){
+    console.log('here');
     this.redirectIfLoggedIn();
   }
 
   redirectIfLoggedIn(){
-    // if (this.props.loggedIn){
-    //   hashHistory.push("/filters/0/businesses");
-    // }
+    if (this.props.loggedIn){
+      hashHistory.push("/filters/0/businesses");
+    }
   }
-
-  // handleSubmit(e){
-  //   e.preventDefault();
-  //   console.log(e.target);
-  //   //handle logic for ALL THREE CHOICES
-  //   //GUEST, LOGIN, SIGNUP
-  //
-  // }
 
   handleClick(e){
     e.preventDefault();
     const user = this.state;
     const action = e.target.id;
     const form = this.props[action];
+
+    form({user});
+  }
+
+  guestLogin(e){
+    e.preventDefault();
+    let guest = "Guest";
+    const form = this.props['signup'];
+    const date = new Date;
+    const currentTime = date.getTime();
+    guest = guest.concat(currentTime);
+
+    const user = {
+      username: `${guest}`,
+      password: "123456"
+    };
+
     form({user});
   }
 
@@ -51,7 +60,7 @@ class SessionForm extends React.Component{
           <button className="guest-login-button"
             type="submit"
             id="guestLogin"
-            onClick={this.handleClick}>Guest Login</button>
+            onClick={this.guestLogin.bind(this)}>Guest Login</button>
         </div>
 
         <form className="session-form">

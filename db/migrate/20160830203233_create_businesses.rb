@@ -6,6 +6,7 @@ class CreateBusinesses < ActiveRecord::Migration
       t.float :lat, null: false
       t.float :lng, null: false
       t.string :address, null: false
+      t.string :profile_image_url
 
       t.timestamps null: false
     end

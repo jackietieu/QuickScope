@@ -19,6 +19,7 @@ class AppRouter extends React.Component{
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
           <IndexRoute component={ Session } />
+          //remember to implemet routes for filters/businesses/reviews
         </ Route>
       </Router>
     );
