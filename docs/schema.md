@@ -9,10 +9,9 @@ column name       | data type | details
 ------------------|-----------|-----------------------
 id                | integer   | not null, primary key
 username          | string    | not null, indexed, unique
-email             | string    | not null, indexed, unique
 password_digest   | string    | not null
 session_token     | string    | not null, indexed, unique
-profile_image_url | string    | not null
+profile_image_url | string    | 
 
 ## businesses
 
@@ -27,6 +26,7 @@ name            | string    | not null, indexed, unique
 description     | string    | not null, indexed, unique
 lat             | float     | not null
 lng             | float     | not null
+address         | string    | not null
 
 ## reviews
 
@@ -37,6 +37,8 @@ lng             | float     | not null
  column name     | data type | details
  ----------------|-----------|-----------------------
  id              | integer   | not null, primary key
+ business_id     | integer   | not null, foreign_key
+ user_id         | integer   | not null, foreign_key
  content         | text      | not null
  rating          | integer   | not null
 
