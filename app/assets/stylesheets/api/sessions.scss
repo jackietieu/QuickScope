@@ -1,3 +1,66 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+main#root {
+    display: flex;
+    justify-content: center;
+}
+
+section.session {
+  background: #ff9b76;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 200px;
+  width: 500px;
+  margin-top: 50%;
+}
+
+div.splash-content {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+h1.splash-title {
+  text-align: right;
+  margin: 10px;
+}
+
+p.splash-description {
+  text-align: right;
+  margin: 10px;
+}
+
+div.session-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  border-left: 6px solid #ffa989;
+}
+
+div.guest-login-container {
+  display: flex;
+  justify-content: center;
+}
+
+form.session-form {
+  margin: 20px;
+}
+
+div.login-signup-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background: #ffc6b1;
+  border: 2px solid #ff7e4e;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #ff703b;
+}

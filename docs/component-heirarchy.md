@@ -43,8 +43,7 @@
 
  |Path   | Component   |
  |-------|-------------|
- | "/signup" | "AuthFormContainer" |
- | "/signin" | "AuthFormContainer" |
+ | "/session" | "AuthFormContainer" |
  | "/" | "RootContainer" |
  | "/filters/:tagId/businesses/" | "RootContainer" |
  | "/filters/:tagId/businesses/:businessId/" | "RootContainer" |
@@ -54,7 +53,6 @@
 
  > I also though about making "/filters/:tagId/businesses/:businessId/" render
  > a separate page where it just displayed the business and its comments.
- > Let me know which one seems better.
 
  |Path   | Component   |
  |-------|-------------|
