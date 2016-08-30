@@ -14,7 +14,6 @@ class SessionForm extends React.Component{
   }
 
   componentDidUpdate(){
-    console.log('here');
     this.redirectIfLoggedIn();
   }
 

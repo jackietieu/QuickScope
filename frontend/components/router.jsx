@@ -1,29 +1,32 @@
 import React from 'react';
-import { Router, Route, IndexRoute, hashHistory, withRouter } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import Session from './session';
 
 class AppRouter extends React.Component{
   constructor(props){
     super(props);
-    // this._redirectUser = this._redirectUser.bind(this);
+    this._redirectUser = this._redirectUser.bind(this);
   }
 
-  // _redirectUser(nextState, replace){
-  //   debugger;
-  //   router.push("/session");
-  // }
+  _redirectUser(nextState, replace){
+    if (window.currentUser == null) {
+      hashHistory.push("session");
+    }
+  }
 
   render(){
     return(
       <Router history={ hashHistory }>
-        <Route path="/" component={ App }>
-          <IndexRoute component={ Session } />
+        <indexRoute path="/session" component={ Session } />
+        <Route path="/" onEnter={this._redirectUser} component={ App }>
           //remember to implemet routes for filters/businesses/reviews
-        </ Route>
+          <Route path="/filters/:filterId/businesses" />
+          <Route path="/filters/:filterId/businesses/:businessId" />
+        </Route>
       </Router>
     );
   }
 }
 
-export default withRouter(AppRouter);
+export default AppRouter;
