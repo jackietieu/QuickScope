@@ -1,7 +1,7 @@
 # Project Name TBD
 
 ## HEROKU LINK:
-> LINK
+> http://rmyelp.herokuapp.com/
 
 ## Minimum Viable Product
 > This full stack project is built using Ruby on Rails on the back-end and React/Redux on the front-end. This project is inspired by Yelp to be a review site for businesses that exist within the "Rick and Morty" universe. Features include:
