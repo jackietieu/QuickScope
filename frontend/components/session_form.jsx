@@ -19,6 +19,7 @@ class SessionForm extends React.Component{
 
   redirectIfLoggedIn(){
     if (this.props.loggedIn){
+      console.log('here');
       hashHistory.push("/filters/0/businesses");
     }
   }

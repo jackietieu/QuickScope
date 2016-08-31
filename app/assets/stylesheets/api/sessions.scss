@@ -8,14 +8,14 @@ main#root {
 }
 
 section.session {
-  background: #ff9b76;
+  background: #f4a081;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border: 4px solid #ff8d62;
   height: 200px;
   width: 500px;
-  margin-top: 33%;
+  margin-top: 20%;
 }
 
 div.splash-content {
@@ -39,7 +39,7 @@ div.session-form-container {
   flex-direction: column;
   justify-content: center;
   margin: 10px;
-  border-left: 6px solid #ffa989;
+  border-left: 6px solid #ff8d62;
 }
 
 div.guest-login-container {
@@ -58,7 +58,7 @@ div.login-signup-buttons {
 
 button {
   background: #ffc6b1;
-  border: 2px solid #ff7e4e;
+  border: 2px solid #d0b1a5;
 }
 
 div.login-signup-buttons button {
@@ -67,5 +67,5 @@ div.login-signup-buttons button {
 
 button:hover {
   cursor: pointer;
-  background: #ff703b;
+  background: #fa9d7b;
 }
