@@ -11,4 +11,10 @@ class Business < ActiveRecord::Base
     source: :tag
 
  # has avg_rating through ratings of all reviews
+
+ def self.filter(tag_id)
+    self.select('*')
+        .joins(:taggings)
+        .where('taggins.tag_id = ?', tag_id)
+  end
 end

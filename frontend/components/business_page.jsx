@@ -1,6 +1,7 @@
 import React from 'react';
-import BusinessIndexContainer from './business_index_container';
 import { Link } from 'react-router';
+import BusinessIndexContainer from './business_index_container';
+import SidebarContainer from './sidebar_container';
 
 export default ({ filterId, businesses }) => (
   <section className="main-page">
@@ -14,6 +15,7 @@ export default ({ filterId, businesses }) => (
     </header>
 
     <section className="businesses-content">
+      <SidebarContainer filterId={filterId} />
       <BusinessIndexContainer filterId={filterId} businesses={businesses} />
     </section>
   </section>
