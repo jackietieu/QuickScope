@@ -22,7 +22,8 @@ class Sidebar extends React.Component{
   render(){
     return (
       <section className="sidebar-container">
-        <o>SIDEBAR CONTAINER</o>
+        <h1>SIDEBAR CONTAINER</h1>
+
         <div className="search">
           <form>
             <label>
@@ -38,8 +39,44 @@ class Sidebar extends React.Component{
                     onClick={this.handleClick}>Search!</button>
           </form>
         </div>
+        <br />
         <div className="filters">
-
+          <h1>FILTER TAGS</h1>
+          <ul className="filters-tag-list">
+            <li className="filter-tag-list-item" id={1}>
+              Food
+            </li>
+            <li className="filter-tag-list-item" id={2}>
+              Nightlife
+            </li>
+            <li className="filter-tag-list-item" id={3}>
+              Restaurant
+            </li>
+            <li className="filter-tag-list-item" id={4}>
+              Shopping
+            </li>
+            <li className="filter-tag-list-item" id={5}>
+              Active Life
+            </li>
+            <li className="filter-tag-list-item" id={6}>
+              Arts and Entertainment
+            </li>
+            <li className="filter-tag-list-item" id={7}>
+              Automotive
+            </li>
+            <li className="filter-tag-list-item" id={8}>
+              Beauty and Spa
+            </li>
+            <li className="filter-tag-list-item" id={9}>
+              Education
+            </li>
+            <li className="filter-tag-list-item" id={10}>
+              Event Planning
+            </li>
+            <li className="filter-tag-list-item" id={11}>
+              Health and Medical
+            </li>
+          </ul>
         </div>
       </section>
     );

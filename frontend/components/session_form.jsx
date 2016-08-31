@@ -21,7 +21,7 @@ class SessionForm extends React.Component{
     if (this.props.loggedIn){
       console.log('redirect since logged in / on session_form');
       console.log(this.props.state);
-      this.props.router.push("/filters/0/businesses");
+      this.props.router.push("/filters/1/businesses");
     }
   }
 

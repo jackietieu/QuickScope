@@ -28,7 +28,7 @@ class AppRouter extends React.Component{
     if (this.props.loggedIn === true) {
       console.log('redirectifloggedin');
       console.log(this.props.state);
-      replace('/filters/0/businesses');
+      replace('/filters/1/businesses');
     }
   }
 
@@ -36,7 +36,7 @@ class AppRouter extends React.Component{
     return(
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
-          <IndexRedirect to="/filters/0/businesses" />
+          <IndexRedirect to="/filters/1/businesses" />
           <Route
             path="/session"
             onEnter={this._redirectIfLoggedIn}

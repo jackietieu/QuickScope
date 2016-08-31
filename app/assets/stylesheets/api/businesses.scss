@@ -9,9 +9,11 @@ header.header-nav {
 }
 
 .header-nav-logo {
+
 }
 
 .header-links {
+  
 }
 
 section.businesses-content {
@@ -20,4 +22,13 @@ section.businesses-content {
 
 section.sidebar-container {
   border: 2px solid black;
+}
+
+li.filter-tag-list-item {
+  background: #f4a081;
+}
+
+li.filter-tag-list-item:hover {
+  background: #fce4db;
+  cursor: pointer;
 }
