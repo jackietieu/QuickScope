@@ -4,6 +4,11 @@ export const BusinessConstants = {
 };
 
 export const receiveBusinesses = (businesses) => ({
-  type: BusinessConstants,
+  type: BusinessConstants.RECEIVE_BUSINESSES,
   businesses
+});
+
+export const requestBusinesses = (filterId) => ({
+  type: BusinessConstants.REQUEST_BUSINESSES,
+  filterId
 });

@@ -6,7 +6,7 @@ export default (state = {}, action) => {
 
   switch (action.type) {
     case BusinessConstants.RECEIVE_BUSINESSES:
-      return merge({}, state, {businesses});
+      return merge({}, state, businesses);
     default:
       return state;
   }

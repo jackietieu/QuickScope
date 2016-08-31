@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-router';
 import App from './app';
 import Session from './session';
-import BusinessIndexContainer from './business_index_container';
+import BusinessPageContainer from './business_page_container';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -25,11 +25,11 @@ class AppRouter extends React.Component{
   render(){
     return(
       <Router history={ hashHistory }>
-        <indexRoute path="/session" component={ Session } />
+        <indexRoute path="/session" onEnter={this._redirectIfLoggedIn} component={ Session } />
         <Route path="/" onEnter={this._redirectUser} component={ App }>
           //remember to implemet routes for filters/businesses/reviews
           <IndexRedirect to='/filters/0/businesses' />
-          <Route path="/filters/:filterId/businesses" component={ BusinessIndexContainer } />
+          <Route path="/filters/:filterId/businesses" component={ BusinessPageContainer } />
           // <Route path="/filters/:filterId/businesses/:businessId" component={ App }/>
         </Route>
       </Router>

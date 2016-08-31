@@ -8,16 +8,34 @@ class BusinessIndex extends React.Component{
   }
 
   componentDidMount(){
-    this.props.requestBusinesses(this.props.params.filterId);
+    this.props.requestBusinesses(this.props.filterId);
   }
+  //
+  // componentWillReceiveProps(){
+  //   this.businesses = this.props.businesses;
+  // }
 
   render(){
+    let businesses;
+    const businessIds = Object.keys(this.props.businesses);
+
+    if (businessIds.length > 0) {
+      businesses = businessIds.map(businessId => (
+        <BusinessIndexItem
+          key={this.props.businesses[businessId].address}
+          business={this.props.businesses[businessId]} />
+      ));
+    }
+
+    console.log(businesses);
     return (
-
-      <p>inside business index</p>
-
+      <section className="business-index">
+        <ul className="business-index-list">
+          {businesses}
+        </ul>
+      </section>
     );
   }
 }
 
-export default withRouter(BusinessIndex);
+export default BusinessIndex;
