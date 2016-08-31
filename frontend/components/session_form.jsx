@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
+import { withRouter } from 'react-router';
 
 class SessionForm extends React.Component{
   constructor(props){
@@ -14,13 +14,14 @@ class SessionForm extends React.Component{
   }
 
   componentDidUpdate(){
-    this.redirectIfLoggedIn();
+    setTimeout(() => {this.redirectIfLoggedIn();}, 0);
   }
 
   redirectIfLoggedIn(){
     if (this.props.loggedIn){
-      console.log('here');
-      hashHistory.push("/filters/0/businesses");
+      console.log('redirect since logged in / on session_form');
+      console.log(this.props.state);
+      this.props.router.push("/filters/0/businesses");
     }
   }
 
@@ -94,4 +95,4 @@ class SessionForm extends React.Component{
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);

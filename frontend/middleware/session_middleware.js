@@ -12,6 +12,7 @@ export default ({getState, dispatch}) => next => action => {
   };
   switch(action.type){
     case SessionConstants.LOGIN:
+      console.log('login through middleware');
       login(action.user, success, errors);
       return next(action);
     case SessionConstants.LOGOUT:
