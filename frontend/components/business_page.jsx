@@ -7,7 +7,7 @@ export default ({ filterId, businesses }) => (
   <section className="main-page">
     <header className="header-nav">
       <div className="header-nav-logo">
-        ProjectTitle
+        Clever Yelp Title TBD
       </div>
       <div className="header-links">
         <Link to="/" className="header-link">Logout</Link>

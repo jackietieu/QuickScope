@@ -4,11 +4,14 @@ import { requestBusinesses } from '../actions/business_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   businesses: state.businesses,
-  filterId: ownProps.filterId
+  filters: {
+    search: state.filters.search,
+    filterId: ownProps.filterId
+  }
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestBusinesses: (filterId) => dispatch(requestBusinesses(filterId))
+  requestBusinesses: (filters) => dispatch(requestBusinesses(filters))
 });
 
 export default connect(

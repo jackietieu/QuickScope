@@ -21,10 +21,14 @@ Tag.create(name: "Health & Medical")
 User.create(username: "admin", password: "123456")
 User.create(username: "user2", password: "abc123")
 
-Business.create(name: "testbusiness1", description: "just a business", lat: 37.804107, lng: 122.407417, address: "251 Chestnut Street, San Francisco, CA 94133", profile_image_url: "")
+Business.create(name: "grocery store", description: "just a business", lat: 37.804107, lng: 122.407417, address: "251 Chestnut Street, San Francisco, CA 94133", profile_image_url: "")
 Tagging.create(business_id: 1, tag_id: 4)
 Tagging.create(business_id: 1, tag_id: 6)
 
-Business.create(name: "restaurant1", description: "foodie spot", lat: 37.771964, lng: -122.403135, address: "600 Townsend Street, San Francisco, CA 94103", profile_image_url: "")
+Business.create(name: "in n our", description: "foodie spot", lat: 37.771964, lng: -122.403135, address: "600 Townsend Street, San Francisco, CA 94103", profile_image_url: "")
 Tagging.create(business_id: 2, tag_id: 1)
 Tagging.create(business_id: 2, tag_id: 3)
+
+Business.create(name: "cool movie theatre", description: "dopeeeee theatreeee", lat: 37.811964, lng: -122.407135, address: "123 Faker Street, San Francisco, CA 94109", profile_image_url: "")
+Tagging.create(business_id: 3, tag_id: 2)
+Tagging.create(business_id: 3, tag_id: 6)

@@ -3,7 +3,10 @@ class Api::BusinessesController < ApplicationController
     #eventually implement filtering, return all biz for now
     #params[:filters][:search]
     #params[:filters][:filterId]
-    @businesses = Business.all
+    search = params[:search]
+    filter_id = params[:filterId]
+
+    @businesses = Business.where("name ILIKE ?", "%#{search}%")
   end
 
   def create

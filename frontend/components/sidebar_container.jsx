@@ -8,9 +8,11 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestFilter: filters => dispatch(requestFilter(filters))
+  // requestFilter: filters => dispatch(requestFilter(filters))
+  requestBusinesses: filters => dispatch(requestBusinesses(filters))
 });
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Sidebar);

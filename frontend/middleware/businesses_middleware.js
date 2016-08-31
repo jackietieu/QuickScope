@@ -6,7 +6,7 @@ export default ({getState, dispatch}) => next => action => {
 
   switch (action.type) {
     case BusinessConstants.REQUEST_BUSINESSES:
-      requestBusinesses(action.filterId, success);
+      requestBusinesses(action.filters, success);
       break;
     default:
       return next(action);

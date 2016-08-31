@@ -7,12 +7,8 @@ class BusinessIndex extends React.Component{
     super(props);
   }
 
-  componentDidMount(){
-    this.props.requestBusinesses(this.props.filterId);
-  }
-  //
-  // componentWillReceiveProps(){
-  //   this.businesses = this.props.businesses;
+  // componentDidMount(){
+  //   this.props.requestBusinesses(this.props.filters);
   // }
 
   render(){
@@ -27,7 +23,6 @@ class BusinessIndex extends React.Component{
       ));
     }
 
-    console.log(businesses);
     return (
       <section className="business-index">
         <ul className="business-index-list">

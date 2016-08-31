@@ -8,7 +8,7 @@ export const receiveBusinesses = (businesses) => ({
   businesses
 });
 
-export const requestBusinesses = (filterId) => ({
+export const requestBusinesses = (filters) => ({
   type: BusinessConstants.REQUEST_BUSINESSES,
-  filterId
+  filters
 });

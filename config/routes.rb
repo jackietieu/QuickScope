@@ -3,10 +3,9 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy, :show]
     resources :tags, only: [:index]
-    resources :filters, only: [:create, :show] do
-      resources :businesses, only: [:create, :index, :show] do
-        resources :reviews, only: [:index, :create]
-      end
+
+    resources :businesses, only: [:create, :index, :show] do
+      resources :reviews, only: [:index, :create]
     end
   end
 

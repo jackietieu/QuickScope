@@ -10,13 +10,15 @@ class Sidebar extends React.Component{
     };
   }
 
-  componentDidUpdate(){
-    console.log('update');
-    console.log(this.props.state);
+  componentDidMount(){
+    this.props.requestBusinesses(this.state);
   }
 
-  update(property){
-    return e => { this.setState({[property]: e.currentTarget.value }); };
+  update(e){
+    e.preventDefault();
+    this.setState({search: e.currentTarget.value}, () => {
+      this.props.requestBusinesses(this.state);
+    });
   }
 
   render(){
@@ -31,12 +33,12 @@ class Sidebar extends React.Component{
               <br />
               <input type="text"
                      value={this.state.search}
-                     onChange={this.update('search')} />
+                     onChange={this.update.bind(this)} />
             </label>
             <button className="search-button"
                     type="submit"
                     id="search"
-                    onClick={this.handleClick}>Search!</button>
+                    >Search!</button>
           </form>
         </div>
         <br />

@@ -16,19 +16,14 @@ class AppRouter extends React.Component{
   }
 
   _redirectIfNotLoggedIn(nextState, replace){
-    console.log(this.props);
     if (this.props.loggedIn === false) {
-      console.log('linking to session');
-      console.log(this.props.state);
       replace('/session');
     }
   }
 
   _redirectIfLoggedIn(nextState, replace){
     if (this.props.loggedIn === true) {
-      console.log('redirectifloggedin');
-      console.log(this.props.state);
-      replace('/filters/1/businesses');
+      replace('/businesses');
     }
   }
 
@@ -36,13 +31,13 @@ class AppRouter extends React.Component{
     return(
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
-          <IndexRedirect to="/filters/1/businesses" />
+          <IndexRedirect to="/businesses" />
           <Route
             path="/session"
             onEnter={this._redirectIfLoggedIn}
             component={ Session } />
           <Route
-            path="/filters/:filterId/businesses"
+            path="/businesses"
             onEnter={this._redirectIfNotLoggedIn}
             component={ BusinessPageContainer } />
         </Route>
