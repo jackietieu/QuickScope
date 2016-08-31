@@ -11,13 +11,13 @@ class AppRouter extends React.Component{
   }
 
   _redirectUser(nextState, replace){
-    if (window.currentUser === null) {
+    if (window.currentUser === undefined) {
       replace('/session');
     }
   }
 
   _redirectIfLoggedIn(nextState, replace){
-    if (window.currentUser) {
+    if (window.currentUser !== undefined) {
       replace('/filters/0/businesses');
     }
   }
