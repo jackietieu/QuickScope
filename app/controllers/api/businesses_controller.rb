@@ -6,7 +6,13 @@ class Api::BusinessesController < ApplicationController
     search = params[:search]
     filter_id = params[:filterId]
 
-    @businesses = Business.where("name ILIKE ?", "%#{search}%")
+    if (filter_id == -1)
+      @businesses = Business.where("name ILIKE ?", "%#{search}%")
+    else
+      @businesses = Business.where("name ILIKE ?", "%#{search}%")
+                            .joins(:taggings)
+                            .where("taggings.tag_id = ?", filter_id)
+    end
   end
 
   def create

@@ -39,7 +39,9 @@ class AppRouter extends React.Component{
           <Route
             path="/businesses"
             onEnter={this._redirectIfNotLoggedIn}
-            component={ BusinessPageContainer } />
+            component={ BusinessPageContainer }>
+            <Route path="/businesses/:businessId" component={ BusinessPageContainer } />
+          </ Route>
         </Route>
       </Router>
     );
