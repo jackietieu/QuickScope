@@ -7,7 +7,7 @@ class Sidebar extends React.Component{
 
     this.state = {
       search: "",
-      filterId: -1
+      filterId: 0
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -59,6 +59,9 @@ class Sidebar extends React.Component{
         <div className="filters">
           <h1>FILTER TAGS</h1>
           <ul className="filters-tag-list">
+            <li className="filter-tag-list-item" id={0} onClick={this.handleClick}>
+              <Link to={'/businesses/0'}>All Businesses</Link>
+            </li>
             <li className="filter-tag-list-item" id={1} onClick={this.handleClick}>
               <Link to={'/businesses/1'}>Food</Link>
             </li>

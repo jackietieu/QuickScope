@@ -6,7 +6,7 @@ class Api::BusinessesController < ApplicationController
     search = params[:search]
     filter_id = params[:filterId]
 
-    if filter_id == "-1"
+    if filter_id == "0"
       @businesses = Business.where("name ILIKE ?", "%#{search}%")
     else
       @businesses = Business.where("name ILIKE ?", "%#{search}%")

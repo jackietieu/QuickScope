@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 
 const _defaultState = {
   search: "",
-  filterId: -1
+  filterId: 0
 };
 
 export default (state = _defaultState, action) => {
