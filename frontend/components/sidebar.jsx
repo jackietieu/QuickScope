@@ -41,7 +41,7 @@ class Sidebar extends React.Component{
         <div className="search">
           <form>
             <label>
-              Search by Name or Address:
+              Search by Name:
               <br />
               <input type="text"
                      value={this.state.search}

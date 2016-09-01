@@ -28,6 +28,12 @@ class Api::BusinessesController < ApplicationController
     end
   end
 
+  def show
+    #remember to setup average logic
+    Business.find(params[:id]).reviews.average(:rating)
+    @business = Business.find(params[:id]).reviews
+  end
+
   private
 
   def business_params
