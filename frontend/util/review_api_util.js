@@ -5,3 +5,12 @@ export const fetchReviews = (businessId, success) => {
     success
   });
 };
+
+export const createReview = (review, success) => {
+  $.ajax({
+    method: 'POST',
+    url: `api/businesses/${review.review.businessId}/reviews`,
+    data: review,
+    success
+  });
+};

@@ -30,10 +30,6 @@ class Api::BusinessesController < ApplicationController
     end
   end
 
-
-  # has_many :reviewers,
-  #   through: :reviews,
-  #   source: :user
   def show
     @reviews = Business.find(params[:id])
                         .reviews

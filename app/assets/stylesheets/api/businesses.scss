@@ -48,3 +48,13 @@ li.business-index-item {
   padding: 10px;
   border: 2px solid black;
 }
+
+section.business-index {
+  width: 600px;
+}
+
+li.business-index-item:hover {
+  cursor: pointer;
+  background: #fad6c9;
+
+}

@@ -12,3 +12,13 @@ section.review-index-container {
   border: 1px solid black;
   padding: 10px;
 }
+
+.review-content {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+input[type=radio]:hover {
+  cursor: pointer;
+}

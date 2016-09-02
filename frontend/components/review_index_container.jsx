@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
 import ReviewIndex from './review_index';
-import { requestReviews } from '../actions/review_actions';
+import { requestReviews, createReview } from '../actions/review_actions';
 // import { requestBusinesses } from '../util/business_api_util';
 
 const mapStateToProps = (state, ownProps) => ({
   reviews: state.reviews,
-  businessId: ownProps.params.businessId
+  filterId: state.filters.filterId,
+  businessId: ownProps.params.businessId,
+  userId: state.session.currentUser.id
 });
 
 const mapDispatchToProps = dispatch => ({
-  requestReviews: businessId => dispatch(requestReviews(businessId))
+  requestReviews: businessId => dispatch(requestReviews(businessId)),
+  createReview: review => dispatch(createReview(review))
 });
 
 export default connect(

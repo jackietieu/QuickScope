@@ -2,14 +2,14 @@ import React from 'react';
 
 export default ({ review }) => (
   <div className="review-index-item">
-    <p>
-      {review.user.username}
-      <br />
-      {review.rating} stars!
-      <br />
-      {review.created_at}
-      <br />
-      {review.content}
-    </p>
+    {review.user.username}
+    <br />
+    Rating: {review.rating} / 5
+    <br />
+    {review.created_at}
+    <br />
+    <div className="review-content">
+    {review.content}
+    </div>
   </div>
 );

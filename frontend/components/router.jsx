@@ -28,6 +28,10 @@ class AppRouter extends React.Component{
     }
   }
 
+  refreshReviews( nextState, replace ){
+    this.props.requestReviews(nextState.params.businessId);
+  }
+
   render(){
     return(
       <Router history={ hashHistory }>
@@ -41,7 +45,7 @@ class AppRouter extends React.Component{
             path="/businesses/:filterId"
             onEnter={this._redirectIfNotLoggedIn}
             component={ BusinessPageContainer } >
-            <Route path="/businesses/:filterId/:businessId" component={ ReviewIndexContainer } />
+            <Route path="/businesses/:filterId/:businessId" onEnter={ this.refreshReviews.bind(this) } component={ ReviewIndexContainer } />
           </Route>
         </Route>
       </Router>
