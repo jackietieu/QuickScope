@@ -10,6 +10,10 @@ class ReviewIndex extends React.Component{
     this.props.requestReviews(this.props.businessId);
   }
 
+  componentDidUpdate(){
+    this.props.requestReviews(this.props.businessId);
+  }
+
   render(){
     let reviews;
     const reviewIds = Object.keys(this.props.reviews);

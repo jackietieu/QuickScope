@@ -1,6 +1,5 @@
 import React from 'react';
 import BusinessIndexItem from './business_index_item';
-import { Link } from 'react-router';
 
 class BusinessIndex extends React.Component{
   constructor(props){
@@ -15,7 +14,8 @@ class BusinessIndex extends React.Component{
       businesses = businessIds.map(businessId => (
         <BusinessIndexItem
           key={this.props.businesses[businessId].address}
-          business={this.props.businesses[businessId]} />
+          business={this.props.businesses[businessId]}
+          filterId={this.props.filters.filterId} />
       ));
     }
 
