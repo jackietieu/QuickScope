@@ -24,17 +24,18 @@ section.sidebar-container {
   border: 2px solid black;
 }
 
-li.filter-tag-list-item {
+.filter-tag {
   background: #f4a081;
 }
 
-li.filter-tag-list-item:hover {
+.filter-tag:hover {
   background: #fce4db;
   cursor: pointer;
 }
 
-.filter-tag-list-item a {
-
+.filter-tag-list a {
+  display: flex;
+  flex-direction: column;
 }
 
 .business-rating-reviews {

@@ -1,6 +1,6 @@
 import React from 'react';
 import BusinessIndexItem from './business_index_item';
-import { withRouter } from 'react-router';
+import { Link } from 'react-router';
 
 class BusinessIndex extends React.Component{
   constructor(props){
