@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.integer :business_id, null: false, index: true
       t.integer :user_id, null: false, index: true
-      t.integer :rating, null: false
+      t.float :rating, null: false
       t.string :content, null: false
 
       t.timestamps null: false

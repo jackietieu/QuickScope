@@ -7,10 +7,6 @@ class BusinessIndex extends React.Component{
     super(props);
   }
 
-  // componentDidMount(){
-  //   this.props.requestBusinesses(this.props.filters);
-  // }
-
   render(){
     let businesses;
     const businessIds = Object.keys(this.props.businesses);

@@ -4,11 +4,12 @@ class Business < ActiveRecord::Base
 
   has_many :taggings
   has_many :reviews
+  has_many :reviewers,
+    through: :reviews,
+    source: :user
   has_many :tags,
     through: :taggings,
     source: :tag
-
- # has avg_rating through ratings of all reviews
 
  def self.filter(tag_id)
     self.select('*')

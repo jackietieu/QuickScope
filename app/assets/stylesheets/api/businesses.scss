@@ -34,4 +34,15 @@ li.filter-tag-list-item:hover {
 }
 
 .filter-tag-list-item a {
+
+}
+
+.business-rating-reviews {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li.business-index-item {
+  margin: 25px;
+  border: 2px solid black;
 }

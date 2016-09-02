@@ -7,31 +7,38 @@ class Api::BusinessesController < ApplicationController
     filter_id = params[:filterId]
 
     if filter_id == "0"
-      @businesses = Business.where("name ILIKE ?", "%#{search}%")
+      @businesses = Business.where("name ILIKE ?", "%#{search}%").includes(:reviews)
     else
       @businesses = Business.where("name ILIKE ?", "%#{search}%")
                             .joins(:taggings)
                             .where("taggings.tag_id = ?", filter_id)
+                            .includes(:reviews)
     end
 
-    render json: @businesses
+    # avg_rating = Business.find(params[:id]).reviews.average(:rating)
+    # @businesses = @businesses.create_with(rating: avg_rating)
+    render "api/businesses/index"
   end
 
   def create
     @business = Business.new(business_params)
 
     if @business.save
-      login(@business)
       render "api/businesses/show"
     else
       render json: @business.errors.full_messages, status: 422
     end
   end
 
+
+  # has_many :reviewers,
+  #   through: :reviews,
+  #   source: :user
   def show
-    #remember to setup average logic
-    Business.find(params[:id]).reviews.average(:rating)
-    @business = Business.find(params[:id]).reviews
+    @reviews = Business.find(params[:id])
+                        .reviews
+                        .includes(:user)
+    render "api/reviews/index"
   end
 
   private

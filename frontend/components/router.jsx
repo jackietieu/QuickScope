@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-rou
 import App from './app';
 import Session from './session';
 import BusinessPageContainer from './business_page_container';
+import ReviewIndexContainer from './review_index_container';
 
 class AppRouter extends React.Component{
   constructor(props){
@@ -31,57 +32,21 @@ class AppRouter extends React.Component{
     return(
       <Router history={ hashHistory }>
         <Route path="/" component={ App }>
-          <IndexRedirect to="/businesses" />
+          <IndexRedirect to="/businesses/0" />
           <Route
             path="/session"
             onEnter={this._redirectIfLoggedIn}
             component={ Session } />
           <Route
-            path="/businesses"
+            path="/businesses/:filterId"
             onEnter={this._redirectIfNotLoggedIn}
-            component={ BusinessPageContainer }>
-            <Route path="/businesses/:businessId" component={ BusinessPageContainer } />
-          </ Route>
+            component={ BusinessPageContainer } >
+            <Route path="/businesses/:filterId/:businessId" component={ ReviewIndexContainer } />
+          </Route>
         </Route>
       </Router>
     );
   }
-
-// render(){
-//   return(
-//     <Router history={ hashHistory }>
-//       <Route path="/" component={ App }>
-//         <IndexRedirect to="/filters/0/businesses" />
-//         <Route
-//           path="/session"
-//           onEnter={this._redirectIfLoggedIn}
-//           component={ Session } />
-//         <Route
-//           path="/filters/:filterId/businesses"
-//           onEnter={this._redirectIfNotLoggedIn}
-//           component={ BusinessPageContainer } />
-//       </Route>
-//     </Router>
-//   );
-// }
-
-//   render(){
-//     return(
-//       <Router history={ hashHistory }>
-//         <indexRoute
-//           path="/session"
-//           component={ Session } />
-//         <Route path="/" onEnter={this._redirectUser} component={ App }>
-//           //remember to implemet routes for filters/businesses/reviews
-//           <IndexRedirect to='/filters/0/businesses' />
-//           <Route
-//             path="/filters/:filterId/businesses"
-//             component={ BusinessPageContainer } />
-// // <Route path="/filters/:filterId/businesses/:businessId" component={ App }/>
-//         </Route>
-//       </Router>
-//     );
-//   }
 }
 
 export default AppRouter;

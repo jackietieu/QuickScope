@@ -7,10 +7,16 @@ const BusinessIndexItem = ({ business }) => (
         {business.id}. {business.name}
       </li>
       <li className="business-index-item-data-field">
+        <div className="business-rating-reviews">
+          Rating: <div className="business-rating">{business.avg_rating}</div>
+          Reviews: <div className="business-reviews">{business.reviews}</div>
+        </div>
+      </li>
+      <li className="business-index-item-data-field">
         {business.address}
       </li>
       <li className="business-index-item-data-field">
-        {business.description}
+        Description: {business.description}
       </li>
     </ul>
   </li>

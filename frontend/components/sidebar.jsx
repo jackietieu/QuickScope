@@ -26,11 +26,9 @@ class Sidebar extends React.Component{
 
   handleClick(e){
     e.preventDefault();
-    console.log(e.currentTarget.id);
     this.setState({filterId: e.currentTarget.id}, () => {
       this.props.requestBusinesses(this.state);
     });
-    console.log(this.state);
   }
 
   render(){
