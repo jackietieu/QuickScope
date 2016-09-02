@@ -7,3 +7,8 @@ section.review-index-container {
   display: flex;
   flex-direction: column;
 }
+
+.review-index-item {
+  border: 1px solid black;
+  padding: 10px;
+}
