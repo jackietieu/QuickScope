@@ -23,8 +23,9 @@ class AppRouter extends React.Component{
   }
 
   _redirectIfLoggedIn(nextState, replace){
-    if (this.props.loggedIn === true) {
-      replace('/businesses');
+    if (nextState.loggedIn === true) {
+      console.log('loggedin');
+      replace('/businesses/0');
     }
   }
 

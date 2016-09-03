@@ -1,11 +1,17 @@
 import { connect } from 'react-redux';
 import BusinessPage from './business_page';
-import { requestBusinesses } from '../util/business_api_util';
+import { logout } from '../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  filterId: ownProps.params.filterId
+  filterId: state.filters.filterId,
+  currentUser: state.session.currentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
 });
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(BusinessPage);
