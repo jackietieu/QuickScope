@@ -6,7 +6,8 @@ import { requestFilter } from '../actions/filter_actions';
 const mapStateToProps = ( state, ownProps) => ({
   filters: state.filters,
   businesses: state.businesses,
-  businessId: ownProps.businessId
+  businessId: ownProps.businessId,
+  reviews: state.reviews
 });
 
 const mapDispatchToProps = dispatch => ({

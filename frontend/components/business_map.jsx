@@ -29,7 +29,6 @@ class BusinessMap extends React.Component{
 
     if (nextProps.businessId){
       let business = nextProps.businesses[nextProps.businessId];
-
       this.MarkerManager.updateMarkers(business);
       this.map.setCenter({lat: business.lat, lng: business.lng});
       this.map.setZoom(13);

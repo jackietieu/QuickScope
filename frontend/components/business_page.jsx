@@ -33,7 +33,11 @@ class BusinessPage extends React.Component{
             Clever Yelp Title TBD
           </div>
           <div className="header-links">
-            {button}
+            <div className="header-user-profile">
+              Welcome, {this.props.currentUser.username}!
+              <img src={this.props.currentUser.profile_image_url} />
+              {button}
+            </div>
           </div>
         </header>
 

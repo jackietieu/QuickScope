@@ -10,8 +10,8 @@ export default (state = _defaultState, action) => {
   const filters = action.filters;
 
   switch (action.type) {
-    case FilterConstants.REQUEST_FILTERS:
-      return merge({}, state, {filters});
+    case FilterConstants.RECEIVE_FILTER:
+      return merge({}, state, filters);
     default:
       return state;
   }

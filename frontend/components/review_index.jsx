@@ -28,7 +28,6 @@ class ReviewIndex extends React.Component{
     e.preventDefault();
     const review = this.state;
     this.setState({business_id: this.props.businessId});
-    console.log(review);
     setTimeout(this.props.createReview({review}), 0);
     setTimeout(this.setState({content: "", rating: 0}), 0);
   }
@@ -57,8 +56,9 @@ class ReviewIndex extends React.Component{
             onChange={this.update('rating')} />
         </label>
       );
-    }
-  );
+    });
+
+    let disabled = (((this.state.rating > 0) && (this.state.content.length > 0)) ? false : true);
 
     return (
       <section className="review-index-container">
@@ -77,7 +77,7 @@ class ReviewIndex extends React.Component{
                       onChange={this.update('content')}></textarea>
           </label>
           <br />
-          <button type="submit" value="Create Review">Create Review</button>
+          <button type="submit" value="Create Review" disabled={disabled}>Create Review</button>
         </form>
         {reviews}
       </section>

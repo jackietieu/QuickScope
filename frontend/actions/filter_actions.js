@@ -1,8 +1,8 @@
 export const FilterConstants = {
-  REQUEST_FILTER: "REQUEST_FILTER"
+  RECEIVE_FILTER: "RECEIVE_FILTER"
 };
 
-export const requestFilter = filters => ({
-  type: FilterConstants.REQUEST_FILTER,
+export const receiveFilter = filters => ({
+  type: FilterConstants.RECEIVE_FILTER,
   filters
 });

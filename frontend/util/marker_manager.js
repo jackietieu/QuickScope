@@ -8,7 +8,9 @@ class MarkerManager {
 
   updateMarkers(business){
     this._removeMarker();
-    this._createMarkerFromBusiness(business);
+    if(business){
+      this._createMarkerFromBusiness(business);
+    }
   }
 
   _createMarkerFromBusiness(business){
