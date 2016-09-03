@@ -4,6 +4,7 @@ import { requestBusinesses } from '../actions/business_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   businesses: state.businesses,
+  reviews: state.reviews,
   filters: {
     search: state.filters.search,
     filterId: ownProps.filterId

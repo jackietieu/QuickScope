@@ -28,6 +28,7 @@ class ReviewIndex extends React.Component{
     e.preventDefault();
     const review = this.state;
     this.setState({business_id: this.props.businessId});
+    console.log(review);
     setTimeout(this.props.createReview({review}), 0);
     setTimeout(this.setState({content: "", rating: 0}), 0);
   }

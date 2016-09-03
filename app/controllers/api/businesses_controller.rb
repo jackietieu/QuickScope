@@ -15,8 +15,6 @@ class Api::BusinessesController < ApplicationController
                             .includes(:reviews)
     end
 
-    # avg_rating = Business.find(params[:id]).reviews.average(:rating)
-    # @businesses = @businesses.create_with(rating: avg_rating)
     render "api/businesses/index"
   end
 

@@ -58,3 +58,7 @@
  	border-collapse: collapse;
  	border-spacing: 0;
  }
+#map-container {
+  width: 250px;
+  height: 250px;
+}
