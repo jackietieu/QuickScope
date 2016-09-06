@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRatingComponent from 'react-star-rating-component';
 
 export default ({ review }) => (
   <div className="review-index-item">
@@ -9,7 +10,12 @@ export default ({ review }) => (
       <div className="review-details">
         {review.user.username}
         <br />
-        Rating: {review.rating} / 5
+          <StarRatingComponent
+              name="user-review-rating"
+              editing={false}
+              starCount={5}
+              value={review.rating}
+          />
         <br />
         {review.created_at}
         <br />

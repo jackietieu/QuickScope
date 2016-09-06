@@ -1,5 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
+import StarRatingComponent from 'react-star-rating-component';
 
 class BusinessIndexItem extends React.Component{
   constructor(props){
@@ -23,7 +24,12 @@ class BusinessIndexItem extends React.Component{
                   {this.props.idx + 1}. {this.props.business.name}
                 </div>
                 <div className="business-rating">
-                  {this.props.business.avg_rating} Stars!
+                  <StarRatingComponent
+                      name="user-review-rating"
+                      editing={false}
+                      starCount={5}
+                      value={parseInt(this.props.business.avg_rating)}
+                  />
                 </div>
                 <div className="business-reviews">
                   {this.props.business.reviews} Reviews!

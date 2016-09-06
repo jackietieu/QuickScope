@@ -6,8 +6,9 @@ section.review-index-container {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
-  height: 90vh;
+  overflow-y: scroll;
+  word-wrap: break-word;
+  height: 92vh;
   min-width: 200px;
   max-width: 250px;
 
@@ -29,7 +30,7 @@ section.review-index-container {
 .new-review-form textarea {
   width: 95.5%;
   height: 80px;
-  margin: 15px 0 5px 0;
+  margin: 0 0 5px 0;
 }
 
 .new-review-form button {
