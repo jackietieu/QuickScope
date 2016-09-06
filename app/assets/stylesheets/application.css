@@ -69,6 +69,7 @@
   display: block;
 }
 #map-container {
+  margin: 20px 0 0 0;
   width: 250px;
   height: 250px;
 }

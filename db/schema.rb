@@ -11,23 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905234952) do
+ActiveRecord::Schema.define(version: 20160906053603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "businesses", force: :cascade do |t|
-    t.string   "name",                                                                                                                                                                null: false
-    t.string   "description",                                                                                                                                                         null: false
-    t.float    "lat",                                                                                                                                                                 null: false
-    t.float    "lng",                                                                                                                                                                 null: false
-    t.string   "address",                                                                                                                                                             null: false
-    t.string   "profile_image_url", default: "http://res.cloudinary.com/dnmknegr2/image/upload/c_fill,g_xy_center,h_50,w_50,x_0,y_0/v1473119089/unsplash_527bf4b4ae00d_1_bjl0cq.jpg"
-    t.datetime "created_at",                                                                                                                                                          null: false
-    t.datetime "updated_at",                                                                                                                                                          null: false
+    t.string   "name",                                                                                                                                                                 null: false
+    t.float    "lat",                                                                                                                                                                  null: false
+    t.float    "lng",                                                                                                                                                                  null: false
+    t.string   "profile_image_url",  default: "http://res.cloudinary.com/dnmknegr2/image/upload/c_fill,g_xy_center,h_50,w_50,x_0,y_0/v1473119089/unsplash_527bf4b4ae00d_1_bjl0cq.jpg"
+    t.datetime "created_at",                                                                                                                                                           null: false
+    t.datetime "updated_at",                                                                                                                                                           null: false
+    t.string   "street_address",                                                                                                                                                       null: false
+    t.string   "city_state_address",                                                                                                                                                   null: false
   end
 
-  add_index "businesses", ["description"], name: "index_businesses_on_description", unique: true, using: :btree
   add_index "businesses", ["name"], name: "index_businesses_on_name", unique: true, using: :btree
 
   create_table "reviews", force: :cascade do |t|

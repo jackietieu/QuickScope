@@ -1,8 +1,5 @@
 class Api::BusinessesController < ApplicationController
   def index
-    #eventually implement filtering, return all biz for now
-    #params[:filters][:search]
-    #params[:filters][:filterId]
     search = params[:search]
     filter_id = params[:filterId]
 
@@ -38,6 +35,6 @@ class Api::BusinessesController < ApplicationController
   private
 
   def business_params
-    params.require(:business).permit(:name, :description, :lat, :lng, :address, :profile_image_url)
+    params.require(:business).permit(:name, :lat, :lng, :street_address, :city_state_address, :profile_image_url)
   end
 end

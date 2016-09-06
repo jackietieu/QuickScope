@@ -1,5 +1,5 @@
 class Business < ActiveRecord::Base
-  validates :name, :description, :lat, :lng, :address, presence: true
+  validates :name, :lat, :lng, :street_address, :city_state_address, presence: true
   validates :name, uniqueness: true
 
   has_many :taggings

@@ -11,9 +11,10 @@ class BusinessIndex extends React.Component{
     const businessIds = Object.keys(this.props.businesses);
 
     if (businessIds.length > 0) {
-      businesses = businessIds.map(businessId => (
+      businesses = businessIds.map((businessId, idx) => (
         <BusinessIndexItem
-          key={this.props.businesses[businessId].address}
+          key={this.props.businesses[businessId].streetAddress}
+          idx={idx}
           business={this.props.businesses[businessId]}
           filterId={this.props.filters.filterId} />
       ));
