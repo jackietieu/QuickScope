@@ -2,10 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 header.header-nav {
   display: flex;
   justify-content: space-between;
   border: 2px solid black;
+  align-items: center;
+}
+
+.header-user-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 .header-nav-logo {
@@ -14,6 +24,10 @@ header.header-nav {
 
 .header-links {
 
+}
+
+.sidebar-container {
+  text-align: center;
 }
 
 section.businesses-content {
@@ -26,7 +40,16 @@ section.sidebar-container {
 }
 
 .filter-tag {
-  background: #f4a081;
+  text-decoration: none;
+  text-align: center;
+  padding: 2px 0;
+  color: rgba(208,247,255, 0.9);
+  text-shadow:
+    1px 1px 1px #000,
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
 }
 
 .filter-tag:hover {
@@ -39,23 +62,39 @@ section.sidebar-container {
   flex-direction: column;
 }
 
-.business-rating-reviews {
-  display: flex;
-  justify-content: flex-end;
-}
-
-li.business-index-item {
-  margin: 25px;
-  padding: 10px;
-  border: 2px solid black;
-}
-
 section.business-index {
-  width: 500px;
+  min-width: 500px;
+}
+
+.business-index-item-profile-picture {
+  margin-right: 10px;
+}
+
+.business-index-item-data-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.business-index-item-name-ratings {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-index-item {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.business-index-item-description {
+  margin-top: 10px;
 }
 
 li.business-index-item:hover {
   cursor: pointer;
   background: #fad6c9;
+}
 
+#root, html {
+  background-color: #002a33;
 }

@@ -36,9 +36,9 @@ class ReviewIndex extends React.Component{
     let reviews;
     const reviewIds = Object.keys(this.props.reviews);
     if (reviewIds.length > 0) {
-      reviews = reviewIds.map(reviewId => (
+      reviews = reviewIds.map((reviewId, idx) => (
         <ReviewIndexItem
-          key={this.props.reviews[reviewId].created_at}
+          key={this.props.reviews[reviewId].created_at.concat(idx)}
           review={this.props.reviews[reviewId]} />
       ));
     }

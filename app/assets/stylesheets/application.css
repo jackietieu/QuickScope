@@ -41,8 +41,13 @@
  	display: block;
  }
  body {
- 	line-height: 1;
- }
+  box-sizing: content-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.1666666666;
+  background: #eee;
+  color: #000;
+}
  ol, ul {
  	list-style: none;
  }
@@ -58,7 +63,27 @@
  	border-collapse: collapse;
  	border-spacing: 0;
  }
+ .group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
 #map-container {
   width: 250px;
   height: 250px;
+}
+main#root {
+  display: flex;
+  justify-content: center;
+  color: rgba(208,247,255, 0.75);
+  text-shadow:
+    /*1px 1px 1px #000,*/
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
+  height: 100%;
+}
+html, body {
+  height: 100%;
 }

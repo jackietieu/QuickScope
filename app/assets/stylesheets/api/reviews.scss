@@ -3,20 +3,36 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 section.review-index-container {
+  padding: 15px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
 
+.new-review-form {
+
+}
+
+.review-details {
+  font-size: 14px;
+}
+
 .review-index-item {
-  border: 1px solid black;
-  padding: 10px;
+  padding: 10px 0;
+  border-top: 1px solid black;
+}
+
+.review-profile-picture {
+  margin: 0 10px 0 0;
+}
+
+.review-user-info {
+  display: flex;
+  align-items: center;
 }
 
 .review-content {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  margin: 10px 0 0 0;
 }
 
 input[type=radio]:hover {

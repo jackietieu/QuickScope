@@ -46,6 +46,9 @@ class BusinessPage extends React.Component{
           <BusinessIndexContainer filterId={this.props.filterId} />
           {this.props.children}
         </section>
+
+        <div id="bg">
+        </div>
       </section>
     );
   }
