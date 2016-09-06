@@ -70,21 +70,26 @@
 }
 #map-container {
   margin: 20px 0 0 0;
-  width: 250px;
-  height: 250px;
+  width: 246px;
+  height: 246px;
+  text-decoration: none;
+  border: 2px solid rgba(169,240,255, 0.25);
 }
 main#root {
   display: flex;
   justify-content: center;
-  color: rgba(208,247,255, 0.75);
+  /*color: rgba(208,247,255, 0.75);
   text-shadow:
     /*1px 1px 1px #000,*/
     -1px -1px 0 rgba(0, 0, 0, 0.75),
     1px -1px 0 rgba(0, 0, 0, 0.75),
     -1px 1px 0 rgba(0, 0, 0, 0.75),
-    1px 1px 0 rgba(0, 0, 0, 0.75);
+    1px 1px 0 rgba(0, 0, 0, 0.75);*/
   height: 100%;
 }
 html, body {
+  height: 100%;
+}
+.main-app {
   height: 100%;
 }

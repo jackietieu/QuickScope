@@ -19,9 +19,15 @@ class BusinessIndexItem extends React.Component{
                 <img src={this.props.business.profile_image_url} />
               </div>
               <div className="business-index-item-id-name">
-                {this.props.idx + 1}. {this.props.business.name}
-                <div className="business-rating">{this.props.business.avg_rating} Stars!</div>
-                <div className="business-reviews">{this.props.business.reviews} Reviews!</div>
+                <div className="business-index-item-name">
+                  {this.props.idx + 1}. {this.props.business.name}
+                </div>
+                <div className="business-rating">
+                  {this.props.business.avg_rating} Stars!
+                </div>
+                <div className="business-reviews">
+                  {this.props.business.reviews} Reviews!
+                </div>
               </div>
             </div>
             <div className="business-index-item-address">

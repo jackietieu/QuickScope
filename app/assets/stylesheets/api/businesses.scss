@@ -7,8 +7,15 @@
 header.header-nav {
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid rgba(169,240,255, 0.25);
   align-items: center;
+  color: rgba(208,247,255, 0.9);
+  text-shadow:
+    1px 1px 1px #000,
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
 }
 
 .header-user-profile {
@@ -35,8 +42,11 @@ section.businesses-content {
 }
 
 section.sidebar-container {
+  height: 495px;
   width: 250px;
-  border: 2px solid black;
+  border-left: 2px solid rgba(169,240,255, 0.25);
+  border-right: 2px solid rgba(169,240,255, 0.25);
+  border-bottom: 2px solid rgba(169,240,255, 0.25);
 }
 
 .sidebar-container input[type="text"] {
@@ -58,7 +68,7 @@ section.sidebar-container {
 }
 
 .filter-tag:hover {
-  background: #fce4db;
+  background: rgba(228,250,255, 0.25);
   cursor: pointer;
 }
 
@@ -68,7 +78,20 @@ section.sidebar-container {
 }
 
 section.business-index {
-  min-width: 500px;
+  min-width: 400px;
+  color: rgba(208,247,255, 0.75);
+  text-shadow:
+    /*1px 1px 1px #000,*/
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
+  font-size: 12px;
+}
+
+.business-index-item-name {
+  font-size: 16px;
+  margin: 0 0 10px 0;
 }
 
 .business-index-item-profile-picture {
@@ -91,10 +114,15 @@ section.business-index {
   justify-content: space-between;
 }
 
+.business-index-item-address {
+  font-size: 16px;
+  text-align: right;
+}
+
 .business-index-item {
   padding: 10px;
-  margin: 10px;
-  border: 1px solid black;
+  margin: 0 10px;
+  border-bottom: 1px solid rgba(169,240,255, 0.25);
 }
 
 .business-index {
@@ -104,7 +132,7 @@ section.business-index {
   // left: 0;
   // right: 0;
   overflow: scroll;
-  height: 600px;
+  // height: 100%;
 }
 
 li.business-index-item:hover {
@@ -114,4 +142,8 @@ li.business-index-item:hover {
 
 #root, html {
   background-color: #002a33;
+}
+
+.businesses-content {
+  height: 95vh;
 }

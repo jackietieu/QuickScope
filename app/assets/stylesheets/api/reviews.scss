@@ -4,24 +4,48 @@
 
 section.review-index-container {
   padding: 15px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  height: 600px;
+  height: 90vh;
+  min-width: 200px;
+  max-width: 250px;
+
+  color: rgba(208,247,255, 0.75);
+  text-shadow:
+    /*1px 1px 1px #000,*/
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
+  border-left: 2px solid rgba(169,240,255, 0.25);
+  border-right: 2px solid rgba(169,240,255, 0.25);
+  border-bottom: 2px solid rgba(169,240,255, 0.25);
 }
 
 .new-review-form {
-
-}
-
-.review-details {
   font-size: 14px;
 }
 
+.new-review-form textarea {
+  width: 95.5%;
+  height: 80px;
+  margin: 15px 0 5px 0;
+}
+
+.new-review-form button {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+// .review-details {
+//   font-size: 12px;
+// }
+
 .review-index-item {
+  font-size: 14px;
   padding: 10px 0;
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(169,240,255, 0.25);
 }
 
 .review-profile-picture {

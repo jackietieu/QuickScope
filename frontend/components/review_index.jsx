@@ -20,6 +20,14 @@ class ReviewIndex extends React.Component{
     this.props.requestReviews(this.props.businessId);
   }
 
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      rating: 0,
+      content: "",
+      business_id: nextProps.businessId
+    });
+  }
+
   update(property){
     return e => this.setState({[property]: e.target.value});
   }
@@ -27,7 +35,6 @@ class ReviewIndex extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     const review = this.state;
-    this.setState({business_id: this.props.businessId});
     setTimeout(this.props.createReview({review}), 0);
     setTimeout(this.setState({content: "", rating: 0}), 0);
   }
@@ -71,9 +78,8 @@ class ReviewIndex extends React.Component{
           </label>
           <br />
           <label>
-            Content:
-            <br />
             <textarea value={this.state.content}
+                      placeholder="Review content..."
                       onChange={this.update('content')}></textarea>
           </label>
           <br />
