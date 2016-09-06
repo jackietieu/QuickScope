@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .splash-text {
-  // margin: 5% 0 0 0;
   font-size: 36px;
   margin-top: 5%;
   text-align: center;
@@ -14,27 +13,10 @@
     1px -1px 0 rgba(0, 0, 0, 0.75),
     -1px 1px 0 rgba(0, 0, 0, 0.75),
     1px 1px 0 rgba(0, 0, 0, 0.75);
-  // overflow-y: hidden;
-  // max-height: 300px;
-  // animation-name: slide;
-  // animation-duration: 2s;
-  // animation-timing-function: ease-in-out;
-  // animation-delay: .5s;
 }
 
-// @keyframes slide {
-//   0% {
-//     margin-bottom: 100%;
-//   }
-//
-//   100% {
-//     margin-bottom: 0%;
-//   }
-// }
 
 .session-splash {
-  // min-width: 1000px;
-  // min-height: 720px;
   background: url('http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,w_1920/v1473099416/photo-1471110338536-858caa3dbe45_hckeda.jpg') no-repeat;
   background-size: auto 100%;
   display: flex;
@@ -47,8 +29,6 @@
 }
 
 .session {
-  // position: absolute;
-  // top: 50%;
   margin-bottom: 20%;
   padding: 20px 0;
   background: rgba(0, 42, 51, 0.75);
@@ -57,7 +37,6 @@
   align-items: center;
   justify-content: space-around;
   border: 2px solid rgba(169,240,255, 0.1);
-  // margin: 0 0 33% 0;
   height: 176px;
   width: 496px;
   text-shadow:
