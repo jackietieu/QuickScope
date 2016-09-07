@@ -2,11 +2,9 @@ class Business < ActiveRecord::Base
   validates :name, :lat, :lng, :street_address, :city_state_address, presence: true
   validates :name, uniqueness: true
 
-  has_many :taggings
   has_many :reviews
-  has_many :reviewers,
-    through: :reviews,
-    source: :user
+  has_many :images
+  has_many :taggings
   has_many :tags,
     through: :taggings,
     source: :tag
@@ -14,6 +12,6 @@ class Business < ActiveRecord::Base
  def self.filter(tag_id)
     self.select('*')
         .joins(:taggings)
-        .where('taggins.tag_id = ?', tag_id)
+        .where('taggings.tag_id = ?', tag_id)
   end
 end

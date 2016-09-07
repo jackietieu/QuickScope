@@ -43,7 +43,7 @@ class BusinessPage extends React.Component{
 
         <section className="businesses-content">
           <SidebarContainer filterId={this.props.filterId} businessId={this.props.params.businessId} />
-          <BusinessIndexContainer filterId={this.props.filterId} />
+          <BusinessIndexContainer filterId={this.props.filterId} businessId={this.props.params.businessId} />
           {this.props.children}
         </section>
 

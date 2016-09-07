@@ -33,7 +33,9 @@ Review.create(business_id: 2, user_id: 1, rating: 5, content: "animal fries r bo
 Review.create(business_id: 2, user_id: 3, rating: 4, content: "wish i could give it 6 stars tbh")
 Review.create(business_id: 2, user_id: 2, rating: 5, content: "BANANA PEPPERS ARE A MUST")
 Review.create(business_id: 2, user_id: 4, rating: 5, content: "if you don't get grilled onions, you're crazy")
-
+Image.create(business_id: 2, image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_200/v1473267361/innout1_il9d2b.jpg")
+Image.create(business_id: 2, image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_200/v1473267361/innout2_i8nhh1.jpg")
+Image.create(business_id: 2, image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_200/v1473267361/innout3_ibowb6.jpg")
 
 Business.create(name: "Century San Francisco Centre 9", lat: 37.783826, lng: -122.405800, street_address: "845 Market St, 5th Fl", city_state_address: "San Francisco, CA 94103", profile_image_url:"http://res.cloudinary.com/dnmknegr2/image/upload/v1473178655/ls_vmfxgl.jpg")
 Tagging.create(business_id: 3, tag_id: 2)

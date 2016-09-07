@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => ({
   filters: {
     search: state.filters.search,
     filterId: ownProps.filterId
-  }
+  },
+  businessId: ownProps.businessId
 });
 
 const mapDispatchToProps = dispatch => ({

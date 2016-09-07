@@ -13,13 +13,6 @@ class ReviewIndex extends React.Component{
       user_id: this.props.userId
     };
 
-    this.stars = <StarRatingComponent
-      name="review-form-rating"
-      starCount={5}
-      value={this.state.rating}
-      onStarClick={this.onStarClick.bind(this)}
-    />;
-
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -34,13 +27,6 @@ class ReviewIndex extends React.Component{
       content: "",
       business_id: nextProps.businessId
     });
-
-    this.stars = <StarRatingComponent
-      name="review-form-rating"
-      starCount={5}
-      value={0}
-      onStarClick={this.onStarClick.bind(this)}
-    />;
   }
 
   update(property){
@@ -49,13 +35,6 @@ class ReviewIndex extends React.Component{
 
   onStarClick(nextValue, prevValue, name) {
     this.setState({rating: nextValue});
-
-    this.stars = <StarRatingComponent
-      name="review-form-rating"
-      starCount={5}
-      value={nextValue}
-      onStarClick={this.onStarClick.bind(this)}
-    />;
   }
 
   handleSubmit(e){
@@ -70,14 +49,16 @@ class ReviewIndex extends React.Component{
   }
 
   render(){
-    let reviews;
+    let reviews = [];
     const reviewIds = Object.keys(this.props.reviews);
-    if (reviewIds.length > 0) {
-      reviews = reviewIds.map((reviewId, idx) => (
+
+    for (let i = reviewIds.length - 1; i >= 0; i--) {
+      reviews.push(
         <ReviewIndexItem
-          key={this.props.reviews[reviewId].created_at.concat(idx)}
-          review={this.props.reviews[reviewId]} />
-      ));
+          key={this.props.reviews[reviewIds[i]].created_at.concat(i)}
+          review={this.props.reviews[reviewIds[i]]}
+        />
+      );
     }
 
     let disabled = ((this.state.rating > 0) && (this.state.content.length > 0) ? false : true);
@@ -87,7 +68,13 @@ class ReviewIndex extends React.Component{
         <form className="new-review-form" onSubmit={this.handleSubmit}>
           Make a review for this business!
           <br />
-            {this.stars}
+            <StarRatingComponent
+                name="review-form-rating-0"
+                key={this.state.rating}
+                starCount={5}
+                value={this.state.rating}
+                onStarClick={this.onStarClick.bind(this)}
+              />
           <label>
             <textarea value={this.state.content}
                       placeholder="Review content..."

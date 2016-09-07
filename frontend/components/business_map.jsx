@@ -28,7 +28,7 @@ class BusinessMap extends React.Component{
     let mapDOMNode;
     let mapOptions;
 
-    if (nextProps.businessId){
+    if (nextProps.businesses[nextProps.businessId] !== undefined){
       let business = nextProps.businesses[nextProps.businessId];
       this.MarkerManager.updateMarkers(business);
       this.map.setCenter({lat: business.lat, lng: business.lng});

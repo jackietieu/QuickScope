@@ -8,7 +8,7 @@ section.review-index-container {
   flex-direction: column;
   overflow-y: scroll;
   word-wrap: break-word;
-  height: 92vh;
+  height: 84vh;
   min-width: 200px;
   max-width: 250px;
 
@@ -21,6 +21,10 @@ section.review-index-container {
   border-left: 2px solid rgba(169,240,255, 0.25);
   border-right: 2px solid rgba(169,240,255, 0.25);
   border-bottom: 2px solid rgba(169,240,255, 0.25);
+}
+
+.review-index-container img {
+  margin-right: 5px;
 }
 
 .new-review-form {
