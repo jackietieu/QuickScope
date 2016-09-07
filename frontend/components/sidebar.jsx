@@ -27,13 +27,16 @@ class Sidebar extends React.Component{
       filterId: this.props.filters.filterId
     }, () => {
         let reviewKeys = Object.keys(this.props.reviews);
-        if ((reviewKeys.length !== 0) && (this.props.reviews[reviewKeys[0]].business_id == this.props.businessId) && (this.props.businesses[this.props.businessId] !== undefined) && (this.props.businesses[this.props.businessId].name.includes(this.state.search))){
+        if ((this.props.businesses[this.props.businessId] !== undefined) && !this.props.businesses[this.props.businessId].name.toLowerCase().includes(this.state.search.toLowerCase())) {
+          hashHistory.push(`/businesses/${this.state.filterId}`);
+          this.props.requestBusinesses(this.state);
+        } else if ((reviewKeys.length !== 0) && (this.props.reviews[reviewKeys[0]].business_id == this.props.businessId) && (this.props.businesses[this.props.businessId] !== undefined) && (this.props.businesses[this.props.businessId].name.toLowerCase().includes(this.state.search.toLowerCase()))){
           this.props.requestBusinesses(this.state);
         } else if (this.state.filterId != 0) {
           hashHistory.push(`/businesses/${this.state.filterId}`);
           this.props.requestBusinesses(this.state);
         } else {
-          if (this.props.filters.filterId !== 0){
+          if (this.props.filters.filterId !== 0 || (this.state.filterId === 0 && this.state.search === "")){
             hashHistory.push("/businesses/0");
           }
           this.props.requestBusinesses(this.state);
