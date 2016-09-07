@@ -160,14 +160,16 @@ li.business-index-item:hover {
 }
 
 .business-index-item-detailed-images img {
-    height: 100px;
-    margin: 0 5px;
-    border: 1px solid black;
-    transition: all 400ms ease;
+  height: 100px;
+  margin: 0 5px;
+  border: 1px solid black;
+  transition: all 400ms ease;
+  z-index: 9000;
 }
 
 .business-index-item-detailed-images img:hover {
   transform:scale(2);
+  z-index: 9001;
 }
 
 .business-index-item-detailed-images {

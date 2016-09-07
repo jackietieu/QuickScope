@@ -27,6 +27,7 @@ class BusinessIndex extends React.Component{
             detailedBusiness =
               <BusinessIndexItemDetailed
                 idx={idx}
+                reviews={this.props.reviews}
                 business={this.props.businesses[businessId]}
                 filterId={this.props.filters.filterId} />;
           }
