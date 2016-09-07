@@ -23,6 +23,7 @@ class BusinessIndexItemDetailed extends React.Component{
                 <div className="business-rating">
                   <StarRatingComponent
                       name="user-review-rating"
+                      key={business.name.concat(business.id.toString())}
                       editing={false}
                       starCount={5}
                       value={parseInt(business.avg_rating)}

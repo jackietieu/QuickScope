@@ -12,6 +12,7 @@ export default ({ review }) => (
         <br />
           <StarRatingComponent
               name="user-review-rating"
+              key={"user-review".concat(review.id.toString())}
               editing={false}
               starCount={5}
               value={review.rating}
