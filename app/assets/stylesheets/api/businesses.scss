@@ -50,6 +50,7 @@ section.sidebar-container {
 .sidebar-container input[type="text"] {
   margin: 20px 0 0 0;
   width: 180px;
+  border-radius: 5px;
 }
 
 .filter-tag {
@@ -160,12 +161,18 @@ li.business-index-item:hover {
 
 .business-index-item-detailed-images img {
     height: 100px;
-    margin: 5px;
+    margin: 0 5px;
     border: 1px solid black;
+    transition: all 400ms ease;
+}
+
+.business-index-item-detailed-images img:hover {
+  transform:scale(2);
 }
 
 .business-index-item-detailed-images {
   display: flex;
-  overflow-x: scroll;
-  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 0;
 }
