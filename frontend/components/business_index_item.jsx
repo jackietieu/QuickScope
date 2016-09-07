@@ -28,7 +28,7 @@ class BusinessIndexItem extends React.Component{
                       name="user-review-rating"
                       editing={false}
                       starCount={5}
-                      value={parseInt(this.props.business.avg_rating)}
+                      value={Math.round(this.props.business.avg_rating)}
                   />
                 </div>
                 <div className="business-reviews">

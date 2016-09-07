@@ -23,6 +23,7 @@ class BusinessIndexItemDetailed extends React.Component{
     let stateReviewIds = Object.keys(nextProps.reviews);
     if ((this.state.businessId === nextProps.business.id && stateReviewIds.length > this.props.business.reviews)) {
       let latestReviewId = stateReviewIds.slice(-1);
+      console.log('here');
       let newAvg = ((this.state.avgRating*(stateReviewIds.length - 1) + nextProps.reviews[latestReviewId].rating)/(stateReviewIds.length));
       this.setState({
         avgRating: newAvg,
@@ -44,6 +45,7 @@ class BusinessIndexItemDetailed extends React.Component{
         reviews: this.props.business.reviews,
         businessId: nextProps.business.id
       }, () => {
+        console.log(Math.round(this.props.business.avg_rating));
         this.stars = <StarRatingComponent
           name="business-review-rating"
           key={this.props.business.name.concat(this.props.business.id.toString())}
