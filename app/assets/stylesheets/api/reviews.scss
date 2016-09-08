@@ -8,7 +8,7 @@ section.review-index-container {
   flex-direction: column;
   overflow-y: scroll;
   word-wrap: break-word;
-  height: 84vh;
+  height: 92.6vh;
   min-width: 200px;
   max-width: 250px;
 
@@ -63,4 +63,12 @@ section.review-index-container {
 
 input[type=radio]:hover {
   cursor: pointer;
+}
+
+.complete-review-create-button {
+  display: flex;
+}
+
+.review-create-plus {
+  margin: 0 0 0 5px;
 }

@@ -21,10 +21,6 @@ class BusinessPage extends React.Component{
   }
 
   render(){
-    const button = <button className="logout-button"
-                           type="submit"
-                           id="logout"
-                           onClick={this.handleClick.bind(this)}>Logout</button>;
 
     return (
       <section className="main-page">
@@ -35,8 +31,13 @@ class BusinessPage extends React.Component{
           <div className="header-links">
             <div className="header-user-profile">
               Welcome, {this.props.currentUser.username}!
-              <img src={this.props.currentUser.profile_image_url} />
-              {button}
+              <div className="header-profile-image-logout">
+                <img src={this.props.currentUser.profile_image_url} />
+                <div className="logout-symbol"
+                     onClick={this.handleClick.bind(this)}>
+                  <i className="fa fa-sign-out fa-3x" aria-hidden="true"></i>
+                </div>
+              </div>
             </div>
           </div>
         </header>
@@ -46,9 +47,6 @@ class BusinessPage extends React.Component{
           <BusinessIndexContainer filterId={this.props.filterId} businessId={this.props.params.businessId} />
           {this.props.children}
         </section>
-
-        <div id="bg">
-        </div>
       </section>
     );
   }

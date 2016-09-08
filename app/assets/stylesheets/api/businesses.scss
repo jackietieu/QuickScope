@@ -24,7 +24,7 @@ header.header-nav {
 }
 
 .header-nav-logo {
-
+  margin-left: 24px;
 }
 
 .header-links {
@@ -48,9 +48,11 @@ section.sidebar-container {
 }
 
 .sidebar-container input[type="text"] {
-  margin: 20px 0 0 0;
+  // margin: 20px 0 0 0;
   width: 180px;
   border-radius: 5px;
+  height: 24px;
+  font-size: 16px;
 }
 
 .filter-tag {
@@ -79,9 +81,6 @@ section.sidebar-container {
 section.business-index-with-detailed-item {
   min-width: 380px;
   max-width:520px;
-  // display: flex;
-  // justify-content: space-around;
-  // flex-direction: column;
   color: rgba(208,247,255, 0.8);
   text-shadow:
     -1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -177,4 +176,24 @@ li.business-index-item:hover {
   justify-content: space-between;
   align-items: center;
   margin: 10px 0 0 0;
+}
+
+.header-profile-image-logout {
+  display: flex;
+}
+
+.logout-symbol:hover {
+  cursor: pointer;
+}
+
+.fa-search {
+  color: rgba(208,247,255, 0.85);
+  margin: 0 0 0 5px;
+}
+
+.search-box {
+  margin: 20px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

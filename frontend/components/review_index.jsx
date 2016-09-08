@@ -81,7 +81,14 @@ class ReviewIndex extends React.Component{
                       onChange={this.update('content')}></textarea>
           </label>
           <br />
-          <button type="submit" value="Create Review" disabled={disabled}>Create Review</button>
+          <button type="submit" value="Create Review" disabled={disabled}>
+            <div className="complete-review-create-button">
+              <span>Create Review</span>
+              <div className="review-create-plus">
+                <i className="fa fa-plus" aria-hidden="true"></i>
+              </div>
+            </div>
+        </button>
         </form>
         {reviews}
       </section>

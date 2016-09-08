@@ -89,7 +89,9 @@ class BusinessIndexItemDetailed extends React.Component{
               {business.cityStateAddress}
             </div>
           </div>
-
+          <div className="business-picture-icon">
+            <i className="fa fa-camera-retro fa-2x" aria-hidden="true"></i>
+          </div>
           <div className="business-index-item-detailed-images">
             {images}
           </div>
