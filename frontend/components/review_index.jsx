@@ -85,12 +85,14 @@ class ReviewIndex extends React.Component{
             <div className="complete-review-create-button">
               <span>Create Review</span>
               <div className="review-create-plus">
-                <i className="fa fa-plus" aria-hidden="true"></i>
+                <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
               </div>
             </div>
         </button>
         </form>
-        {reviews}
+        <div className="review-index-items">
+          {reviews}
+        </div>
       </section>
     );
   }

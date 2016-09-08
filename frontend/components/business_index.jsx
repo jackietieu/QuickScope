@@ -9,6 +9,7 @@ class BusinessIndex extends React.Component{
 
   render(){
     let detailedBusiness;
+    let scrollIntro;
     let businesses = [];
     const businessIds = Object.keys(this.props.businesses);
     let styleProp;
@@ -34,13 +35,24 @@ class BusinessIndex extends React.Component{
         });
     }
 
-    styleProp = (detailedBusiness === undefined ? {"height":"95.5vh"} : {"height":"calc(100vh - 285px)"})
+    if (this.props.filters.filterId === 0 && this.props.filters.search === "") {
+      scrollIntro = <li className="scrollIntro">
+        <div className="scrollIntro-text">
+          <i className="fa fa-angle-double-down fa-lg" aria-hidden="true"></i>
+          Scroll down to see more businesses!
+          <i className="fa fa-angle-double-down fa-lg" aria-hidden="true"></i>
+        </div>
+      </li>;
+    }
+
+    styleProp = (detailedBusiness === undefined ? {"height":"92.5vh", "margin":"10px 0 10px 10px"} : {"height":"calc(100vh - 285px"});
 
     return (
       <section className="business-index-with-detailed-item">
         {detailedBusiness}
         <section className="business-index">
           <ul className="business-index-list" style={styleProp}>
+            {scrollIntro}
             {businesses}
           </ul>
         </section>

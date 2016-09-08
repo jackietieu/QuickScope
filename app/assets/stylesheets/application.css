@@ -82,7 +82,7 @@ main#root {
 }
 html, body {
   height: 100%;
-  background: rgba(0,42,51,.9);
+  background: #29475f;
 }
 .main-app {
   height: 100%;

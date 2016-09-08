@@ -3,32 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 section.review-index-container {
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
   word-wrap: break-word;
-  height: 92.6vh;
+  height: 94.6vh;
   min-width: 200px;
   max-width: 250px;
-
+  // background: #29475f;
+  margin: 10px 0 0 0;
   color: rgba(208,247,255, 0.75);
-  text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.75),
-    1px -1px 0 rgba(0, 0, 0, 0.75),
-    -1px 1px 0 rgba(0, 0, 0, 0.75),
-    1px 1px 0 rgba(0, 0, 0, 0.75);
-  border-left: 2px solid rgba(169,240,255, 0.25);
-  border-right: 2px solid rgba(169,240,255, 0.25);
-  border-bottom: 2px solid rgba(169,240,255, 0.25);
 }
 
 .review-index-container img {
   margin-right: 5px;
 }
 
+.review-index-items {
+  overflow-y: scroll;
+  height: 82.5vh;
+  padding: 10px;
+  background: rgba(69, 115, 147, 0.7);
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
+  box-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
+  border: 2px solid rgba(169,240,255, 0.25);
+}
+
 .new-review-form {
+  padding: 10px;
+  margin: 0 0 10px 0;
   font-size: 14px;
+  background: rgba(69, 115, 147, 0.7);
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
+  box-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.75),
+    1px -1px 0 rgba(0, 0, 0, 0.75),
+    -1px 1px 0 rgba(0, 0, 0, 0.75),
+    1px 1px 0 rgba(0, 0, 0, 0.75);
+  border: 2px solid rgba(169,240,255, 0.25);
 }
 
 .new-review-form textarea {
@@ -39,13 +62,16 @@ section.review-index-container {
 
 .new-review-form button {
   font-size: 14px;
-  margin: 0 0 10px 0;
 }
 
 .review-index-item {
   font-size: 14px;
   padding: 10px 0;
-  border-top: 1px solid rgba(169,240,255, 0.25);
+  border-bottom: 1px solid rgba(169,240,255, 0.25);
+}
+
+.review-index-item:first-child {
+  padding: 0 0 10px 0;
 }
 
 .review-profile-picture {
