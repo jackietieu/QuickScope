@@ -33,6 +33,14 @@ class BusinessIndex extends React.Component{
                 filterId={this.props.filters.filterId} />;
           }
         });
+    } else if (this.props.filters.search !== "") {
+      businesses = <li>
+        <div className="no-business-results">
+          <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <br />
+          No businesses match your query!
+        </div>
+      </li>;
     }
 
     if (this.props.filters.filterId === 0 && this.props.filters.search === "") {

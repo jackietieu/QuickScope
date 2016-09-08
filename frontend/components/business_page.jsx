@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
+import { hashHistory, withRouter } from 'react-router';
 import BusinessIndexContainer from './business_index_container';
 import SidebarContainer from './sidebar_container';
 import ReviewIndexContainer from './review_index_container';
@@ -20,28 +20,39 @@ class BusinessPage extends React.Component{
     }
   }
 
-  render(){
+  handleLogoClick(e){
+    this.props.router.push("/businesses/0");
+    this.props.requestBusinesses({search:"", filterId:0});
+  }
 
-    return (
-      <section className="main-page">
-        <header className="header-nav">
-          <div className="header-nav-logo">
-            Clever Yelp Title TBD
+  render(){
+    let header =
+      <header className="header-nav">
+        <div className="header-nav-logo" onClick={this.handleLogoClick.bind(this)}>
+          <img src="http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,w_151/v1473377274/noun_581513_cc_pwvcxa.png" />
+          <div className="header-logo-name">
+            QuickScope
           </div>
-          <div className="header-links">
-            <div className="header-user-profile">
+        </div>
+        <div className="header-links">
+          <div className="header-user-profile">
+            <div className="header-welcome">
               Welcome, {this.props.currentUser.username}!
-              <div className="header-profile-image-logout">
-                <img src={this.props.currentUser.profile_image_url} />
-                <div className="logout-symbol"
-                     onClick={this.handleClick.bind(this)}>
-                  <i className="fa fa-sign-out fa-3x" aria-hidden="true"></i>
-                </div>
+            </div>
+            <div className="header-profile-image-logout">
+              <img src={this.props.currentUser.profile_image_url} />
+              <div className="logout-symbol"
+                   onClick={this.handleClick.bind(this)}>
+                <i className="fa fa-sign-out fa-2x" aria-hidden="true"></i>
               </div>
             </div>
           </div>
-        </header>
+        </div>
+      </header>;
 
+    return (
+      <section className="main-page">
+        {header}
         <section className="businesses-content">
           <SidebarContainer filterId={this.props.filterId} businessId={this.props.params.businessId} />
           <BusinessIndexContainer filterId={this.props.filterId} businessId={this.props.params.businessId} />
@@ -52,4 +63,4 @@ class BusinessPage extends React.Component{
   }
 }
 
-export default BusinessPage;
+export default withRouter(BusinessPage);

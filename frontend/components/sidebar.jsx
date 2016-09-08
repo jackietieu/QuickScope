@@ -53,10 +53,6 @@ class Sidebar extends React.Component{
   render(){
     let reviewKeys = Object.keys(this.props.reviews);
 
-    // if ((reviewKeys.length !== 0) && (this.props.reviews[reviewKeys[0]].business_id == this.props.businessId) && (this.props.businesses[this.props.businessId] !== undefined) && (this.props.businesses[this.props.businessId].name.includes(this.state.search))){
-    //   this.currentBusinessReviewsPath = `/${this.props.businessId}`;
-    // }
-
     return (
       <section className="sidebar-container">
         <div className="search">
@@ -66,7 +62,7 @@ class Sidebar extends React.Component{
                 <input type="text"
                   value={this.state.search}
                   onChange={this.update.bind(this)}
-                  placeholder="Search..." />
+                  placeholder="Quick search..." />
                 <i className="fa fa-search fa-2x" aria-hidden="true"></i>
               </div>
             </label>

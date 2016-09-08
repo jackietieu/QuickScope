@@ -66,35 +66,34 @@ class BusinessIndexItemDetailed extends React.Component{
 
     return(
       <li className="business-index-item-detailed">
-          <div className="business-index-item-data-field">
-            <div className="business-index-item-name-ratings">
-              <div className="business-index-item-profile-picture">
-                <img src={business.profile_image_url} />
+        <div className="business-index-item-data-field">
+          <div className="business-index-item-name-ratings">
+            <div className="business-index-item-profile-picture">
+              <img src={business.profile_image_url} />
+            </div>
+            <div className="business-index-item-id-name">
+              <div className="business-index-item-name">
+                {this.props.idx + 1}. {business.name}
               </div>
-              <div className="business-index-item-id-name">
-                <div className="business-index-item-name">
-                  {this.props.idx + 1}. {business.name}
-                </div>
-                <div className="business-rating">
-                  {this.stars}
-                </div>
-                <div className="business-reviews">
-                  {business.reviews} Reviews!
-                </div>
+              <div className="business-rating">
+                {this.stars}
+              </div>
+              <div className="business-reviews">
+                {business.reviews} Reviews!
               </div>
             </div>
-            <div className="business-index-item-address">
-              {business.streetAddress}
-              <br />
-              {business.cityStateAddress}
-            </div>
           </div>
-          <div className="business-picture-icon">
-            <i className="fa fa-camera-retro fa-2x" aria-hidden="true"></i>
+          <div className="business-index-item-address">
+            {business.streetAddress}
+            <br />
+            {business.cityStateAddress}
           </div>
-          <div className="business-index-item-detailed-images">
-            {images}
-          </div>
+        </div>
+        <div className="business-item-detailed-separator">
+        </div>
+        <div className="business-index-item-detailed-images">
+          {images}
+        </div>
       </li>
     );
   }

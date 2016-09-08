@@ -11,7 +11,7 @@ section.review-index-container {
   max-width: 250px;
   // background: #29475f;
   margin: 10px 0 0 0;
-  color: rgba(208,247,255, 0.75);
+  color: #0b141a;
 }
 
 .review-index-container img {
@@ -22,12 +22,12 @@ section.review-index-container {
   overflow-y: scroll;
   height: 82.5vh;
   padding: 10px;
-  background: rgba(69, 115, 147, 0.7);
-  text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.75),
-    1px -1px 0 rgba(0, 0, 0, 0.75),
-    -1px 1px 0 rgba(0, 0, 0, 0.75),
-    1px 1px 0 rgba(0, 0, 0, 0.75);
+  background: #7c99aa;
+  // text-shadow:
+  //   -1px -1px 0 rgba(0, 0, 0, 0.75),
+  //   1px -1px 0 rgba(0, 0, 0, 0.75),
+  //   -1px 1px 0 rgba(0, 0, 0, 0.75),
+  //   1px 1px 0 rgba(0, 0, 0, 0.75);
   box-shadow:
     -1px -1px 0 rgba(0, 0, 0, 0.75),
     1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -40,12 +40,12 @@ section.review-index-container {
   padding: 10px;
   margin: 0 0 10px 0;
   font-size: 14px;
-  background: rgba(69, 115, 147, 0.7);
-  text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.75),
-    1px -1px 0 rgba(0, 0, 0, 0.75),
-    -1px 1px 0 rgba(0, 0, 0, 0.75),
-    1px 1px 0 rgba(0, 0, 0, 0.75);
+  background: #7c99aa;
+  // text-shadow:
+  //   -1px -1px 0 rgba(0, 0, 0, 0.75),
+  //   1px -1px 0 rgba(0, 0, 0, 0.75),
+  //   -1px 1px 0 rgba(0, 0, 0, 0.75),
+  //   1px 1px 0 rgba(0, 0, 0, 0.75);
   box-shadow:
     -1px -1px 0 rgba(0, 0, 0, 0.75),
     1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -58,10 +58,12 @@ section.review-index-container {
   width: 95.5%;
   height: 80px;
   margin: 0 0 5px 0;
+  background: #2b4251;
 }
 
 .new-review-form button {
   font-size: 14px;
+  background: #2b4251;
 }
 
 .review-index-item {
