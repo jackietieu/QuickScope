@@ -53,7 +53,7 @@ class BusinessIndex extends React.Component{
       </li>;
     }
 
-    styleProp = (detailedBusiness === undefined ? {"height":"92.5vh", "margin":"10px 0 10px 10px"} : {"height":"calc(100vh - 285px"});
+    styleProp = (detailedBusiness === undefined ? {"height":"94vh", "margin":"10px 0 0 10px"} : {"height":"calc(100vh - 290px"});
 
     return (
       <section className="business-index-with-detailed-item">

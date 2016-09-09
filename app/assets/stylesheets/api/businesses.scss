@@ -210,7 +210,7 @@ section.business-index-with-detailed-item {
   overflow-y: scroll;
   background: #7c99aa;
   border-top: 1px solid rgba(169,240,255, 0.25);
-  margin: 10px;
+  margin: 10px 10px 0 10px;
   border: 2px solid rgba(169, 240, 255, 0.2);
   color: #0b141a;
   box-shadow:
@@ -281,7 +281,7 @@ li.business-index-item:hover {
   display: none;
   position: absolute;
   right: 0;
-  bottom: -22px;
+  bottom: -24px;
   font-size: 14px;
   white-space: nowrap;
   background: #2b4251;
@@ -291,9 +291,13 @@ li.business-index-item:hover {
 
 .profile-links li {
   width: 100px;
-  height: 20px;
+  height: 18px;
   border: 2px solid rgba(169,240,255, 0.25);
   color: rgba(208,247,255, 0.9);
+}
+
+.profile-links li:hover {
+  background: rgba(228,250,255, 0.25);
 }
 
 .header-profile-image-logout {
@@ -316,9 +320,9 @@ li.business-index-item:hover {
 }
 
 .fa-search {
-  // color: rgba(208,247,255, 0.85):
-  // color: #0b141a;
+  // color: rgba(208,247,255, 0.85);
   color: #0b141a;
+  // color: #0b141a;
   margin: 0 0 0 5px;
 }
 
