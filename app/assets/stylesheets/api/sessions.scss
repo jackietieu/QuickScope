@@ -27,6 +27,10 @@
   width: 100vw;
 }
 
+.splash-title {
+  font-size: 36px;
+}
+
 .session {
   margin-bottom: 20%;
   padding: 20px 0;
@@ -37,7 +41,8 @@
   justify-content: space-around;
   border: 2px solid rgba(169,240,255, 0.1);
   height: 176px;
-  width: 496px;
+  // width: 496px;
+  width: 560px;
   text-shadow:
     1px 1px 1px #000,
     -1px -1px 0 rgba(0, 0, 0, 0.75),

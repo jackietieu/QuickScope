@@ -9,10 +9,10 @@ export default () => (
       <div className="session">
         <div className="splash-content">
           <h1 className="splash-title">
-            TitleTBD
+            QuickScope
           </h1>
           <p className="splash-description">
-            Login or signup to check out businesses and post reviews!
+            Login or signup to quickly scope out local businesses and post reviews!
           </p>
         </div>
 

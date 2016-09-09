@@ -41,10 +41,12 @@ class BusinessPage extends React.Component{
             </div>
             <div className="header-profile-image-logout">
               <img src={this.props.currentUser.profile_image_url} />
-              <div className="logout-symbol"
-                   onClick={this.handleClick.bind(this)}>
-                <i className="fa fa-sign-out fa-2x" aria-hidden="true"></i>
-              </div>
+              <ul className="profile-links">
+                <li className="logout"
+                  onClick={this.handleClick.bind(this)}>
+                  Logout
+                </li>
+              </ul>
             </div>
           </div>
         </div>

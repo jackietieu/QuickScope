@@ -64,14 +64,16 @@ class SessionForm extends React.Component{
 
         <form className="session-form">
           <label>
-            Username:
+            <span style={{"marginLeft":"5px"}}>Username:</span>
+            <br />
             <input type="text"
                    value={this.state.username}
                    onChange={this.update('username')} />
           </label>
           <br />
           <label>
-            Password:
+            <span style={{"marginLeft":"5px"}}>Password:</span>
+            <br />
             <input type="text"
                    value={this.state.password}
                    onChange={this.update('password')} />
