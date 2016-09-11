@@ -2,7 +2,7 @@
 
 [QuickScope live][heroku]
 
-[heroku]: http://www.qscope.herokuapp.com
+[heroku]: http://www.quickscope.xyz
 
 QuickScope is a full-stack web site that is inspired by Yelp. This web application makes use of Ruby on Rails on the backend, a PostgreSQL database, and React.js with Redux on the frontend for efficient navigation.
 
@@ -36,7 +36,7 @@ The main feature of the site is the ability to browse through businesses and rev
 
 ### Asynchronous Searching
 
-  The primary benefit of the code structure of this site is the ability to maintain a detailed view of any given business and search through different businesses at the same time. The `sidebar-container` holds two different methods of searching businesses: 1) Users can search for a business by typing the name of the business and 2) Users can filter businesses by selecting specific tags. On every keypress within the search input box, an API call is made to the database to return any businesses that match the parameters. The `filter_id` is `0` upon login, which refers to the index of all businesses. Selecting a tag on the sidebar will change the `filter_id` and include it within the parameters as a query string.
+  The primary benefit of the code structure of this site is the ability to maintain a detailed view of any given business and search through different businesses at the same time. The `sidebar-container` holds two different methods of searching businesses: 1) Users can search for a business by typing the name of the business and 2) Users can filter businesses by selecting specific tags. On every keypress within the search input box, an API call is made to the database with the updated `search` string query to return any businesses that match the parameters. The `filter_id` is also `0` upon login, which refers to the index of all businesses. Selecting a tag on the sidebar will change the `filter_id` and include it within the parameters as a query string.
 
   ```Ruby
   def index
@@ -55,4 +55,5 @@ The main feature of the site is the ability to browse through businesses and rev
     render "api/businesses/index"
   end
   ```
-  The results are instant, and the `business-index` reflects any changes. The `business-index-item-detailed` component will remain rendered until it is no longer part of the results returned by the API call.
+  
+  The results are instant, and the `business-index` reflects any changes. The selected business within the `business-index-item-detailed` component will remain rendered until it is no longer part of the results returned by the API call.

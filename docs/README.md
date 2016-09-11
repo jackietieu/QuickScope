@@ -1,7 +1,7 @@
 # Project Name TBD
 
 ## HEROKU LINK:
-> http://rmyelp.herokuapp.com/
+> http://www.quickscope.xyz
 
 ## Minimum Viable Product
 > This full stack project is built using Ruby on Rails on the back-end and React/Redux on the front-end. This project is inspired by Yelp to be a review site for businesses, with users being able to quickly check out businesses and reviews while staying on one page. Features include:
