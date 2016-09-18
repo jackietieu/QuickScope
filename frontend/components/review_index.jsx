@@ -88,7 +88,7 @@ class ReviewIndex extends React.Component{
                 <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
               </div>
             </div>
-        </button>
+          </button>
         </form>
         <div className="review-index-items">
           {reviews}

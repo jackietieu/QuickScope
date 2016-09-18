@@ -78,7 +78,7 @@ class Sidebar extends React.Component{
             <Link className="filter-tag" to={`/businesses/2`} id={2} onClick={this.handleClick}>Nightlife</Link>
             <Link className="filter-tag" to={`/businesses/3`} id={3} onClick={this.handleClick}>Restaurant</Link>
             <Link className="filter-tag" to={`/businesses/4`} id={4} onClick={this.handleClick}>Shopping</Link>
-            <Link className="filter-tag" to={`/businesses/6`} id={6} onClick={this.handleClick}>Arts and Entertainment</Link>
+            <Link className="filter-tag" to={`/businesses/5`} id={6} onClick={this.handleClick}>Arts and Entertainment</Link>
           </aside>
         </div>
 
