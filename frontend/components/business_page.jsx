@@ -14,6 +14,10 @@ class BusinessPage extends React.Component{
     this.props.logout();
   }
 
+  componentDidMount(){
+    document.getElementById("root").style.boxShadow = "inset 0 0 0 1000px rgba(0, 0, 0, 0.33)";
+  }
+
   componentWillReceiveProps(nextProps){
     if(nextProps.currentUser === null){
       hashHistory.push("/session");
