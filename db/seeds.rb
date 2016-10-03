@@ -12,7 +12,7 @@ Tag.create(name: "Food")
 Tag.create(name: "Nightlife")
 Tag.create(name: "Restaurant")
 Tag.create(name: "Shopping")
-Tag.create(name: "Arts & Entertainment")
+# Tag.create(name: "Arts & Entertainment")
 
 User.create(username: "StephC", password: "123456", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_38/v1473445178/user1_saypqj.jpg")
 User.create(username: "MichaelJ", password: "123456", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,w_38/v1473445178/user2_etxbyg.jpg")
@@ -330,7 +330,7 @@ Image.create(business_id: 27, image_url: "http://res.cloudinary.com/dnmknegr2/im
 
 
 #Shopping businesses
-Business.create(name: "Westfield San Francisco Centre", lat: 37.783889, lng: -122.406424, street_address: "865 Market St", city_state_address: "San Francisco, CA", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/v1473442472/westfieldsf_zjwo0o.jpg")
+Business.create(name: "Westfield San Francisco", lat: 37.783889, lng: -122.406424, street_address: "865 Market St", city_state_address: "San Francisco, CA", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/v1473442472/westfieldsf_zjwo0o.jpg")
 Tagging.create(business_id: 28, tag_id: 4)
 Review.create(business_id: 28, user_id: 10, rating: 3, content: "The few stores I'll stop by when here are J Crew, Nordstrom, Adidas, and Bloomingdales.")
 Review.create(business_id: 28, user_id: 4, rating: 5, content: "It's 7 stories high with spiral escalators!!!")
@@ -361,7 +361,7 @@ Image.create(business_id: 30, image_url: "http://res.cloudinary.com/dnmknegr2/im
 Image.create(business_id: 30, image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_200/v1473443147/eastridge2_gnlck9.jpg")
 Image.create(business_id: 30, image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_200/v1473443147/eastridge3_zxbabe.jpg")
 
-Business.create(name: "Stanford Shopping Center", lat: 37.443484, lng: -122.172315, street_address: "660 Stanford Shopping Ctr", city_state_address: "Palo Alto, CA", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/v1473443623/stanford_adwfli.jpg")
+Business.create(name: "Stanford Center", lat: 37.443484, lng: -122.172315, street_address: "660 Stanford Shopping Ctr", city_state_address: "Palo Alto, CA", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/v1473443623/stanford_adwfli.jpg")
 Tagging.create(business_id: 31, tag_id: 4)
 Review.create(business_id: 31, user_id: 4, rating: 4, content: "All of the primary stores here definitely deliver.")
 Review.create(business_id: 31, user_id: 5, rating: 4, content: "Such a pleasant vibe for a mall")
@@ -372,7 +372,7 @@ Image.create(business_id: 31, image_url: "http://res.cloudinary.com/dnmknegr2/im
 Image.create(business_id: 31, image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_200/v1473443625/stanford2_rzdz5n.jpg")
 Image.create(business_id: 31, image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,h_200/v1473443625/stanford3_lwlwfv.jpg")
 
-Business.create(name: "Westfield Valley Fair", lat: 37.325037, lng: -121.945745, street_address: "2855 Stevens Creek Blvd", city_state_address: "Santa Clara, CA", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/v1473444003/wfvf_ohr1wr.jpg")
+Business.create(name: "Valley Fair", lat: 37.325037, lng: -121.945745, street_address: "2855 Stevens Creek Blvd", city_state_address: "Santa Clara, CA", profile_image_url: "http://res.cloudinary.com/dnmknegr2/image/upload/v1473444003/wfvf_ohr1wr.jpg")
 Tagging.create(business_id: 32, tag_id: 4)
 Review.create(business_id: 32, user_id: 4, rating: 4, content: "Definitely one of the nicest malls out there")
 Review.create(business_id: 32, user_id: 2, rating: 5, content: "Been going here for years. Stores always change but the vibes are always amazing.")

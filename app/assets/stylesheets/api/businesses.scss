@@ -30,6 +30,10 @@ header.header-nav {
   // -webkit-text-stroke-color: black;
 }
 
+// .business-index {
+//   height: 100%;
+// }
+
 .header-nav-logo img {
   height: 36px;
   width: auto;
@@ -81,13 +85,14 @@ header.header-nav {
 
 section.businesses-content {
   display: flex;
+  height: calc(100vh - 46px);
 }
 
 section.sidebar-container {
   text-align: center;
   margin: 10px 0 0 0;
   background: rgba(69, 115, 147, 1);
-  height: 519px;
+  height: 491px;
   width: 250px;
   border: 2px solid rgba(169,240,255, 0.25);
   box-shadow:
@@ -166,7 +171,7 @@ section.business-index-with-detailed-item {
 
 .business-index-item-name {
   font-size: 16px;
-  margin: 0 0 10px 0;
+  margin: 0 10px 10px 0;
 }
 
 .business-index-item-profile-picture {
@@ -207,6 +212,7 @@ section.business-index-with-detailed-item {
 
 
 .business-index-list {
+  height: 91.9vh;
   overflow-y: scroll;
   background: #7c99aa;
   border-top: 1px solid rgba(169,240,255, 0.25);

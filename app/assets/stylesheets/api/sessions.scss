@@ -32,7 +32,8 @@
 }
 
 .session {
-  margin-bottom: 20%;
+  // margin-bottom: 20%;
+  margin: 0 0 10% 0;
   padding: 20px 0;
   background: rgba(0, 42, 51, 0.75);
   overflow: hidden;
@@ -41,6 +42,7 @@
   justify-content: space-around;
   border: 2px solid rgba(169,240,255, 0.1);
   height: 176px;
+  min-height: 176px;
   // width: 496px;
   width: 560px;
   text-shadow:
