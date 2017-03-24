@@ -192,6 +192,7 @@ section.business-index-with-detailed-item {
 .business-index-item-data-field {
   display: flex;
   justify-content: space-between;
+  background: rgba(124, 153, 170, 0.9);
 }
 
 .business-index-item-address {
@@ -230,7 +231,7 @@ section.business-index-with-detailed-item {
   padding: 10px;
   margin: 10px;
   border: 2px solid rgba(169,240,255, 0.2);
-  background: #7c99aa;
+  background: rgba(124, 153, 170, 0.9);
   box-shadow:
     -1px -1px 0 rgba(0, 0, 0, 0.75),
     1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -245,7 +246,7 @@ section.business-index-with-detailed-item {
 
 li.business-index-item:hover {
   cursor: pointer;
-  background: rgba(228,250,255, 0.15);
+  background: rgba(41, 71, 95, 0.05);
 }
 
 .businesses-content {
