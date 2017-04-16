@@ -7,7 +7,8 @@ const mapStateToProps = ( state, ownProps) => ({
   filters: state.filters,
   businesses: state.businesses,
   businessId: ownProps.businessId,
-  reviews: state.reviews
+  reviews: state.reviews,
+  currentUser: state.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
