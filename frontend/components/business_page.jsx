@@ -40,17 +40,9 @@ class BusinessPage extends React.Component{
         </div>
         <div className="header-links">
           <div className="header-user-profile">
-            <div className="header-welcome">
-              Welcome, {this.props.currentUser.username}!
-            </div>
-            <div className="header-profile-image-logout">
-              <img src={this.props.currentUser.profile_image_url} />
-              <ul className="profile-links">
-                <li className="logout"
-                  onClick={this.handleClick.bind(this)}>
-                  Logout
-                </li>
-              </ul>
+            <div className="header-profile-image-logout"
+              onClick={this.handleClick.bind(this)}>
+              Logout
             </div>
           </div>
         </div>

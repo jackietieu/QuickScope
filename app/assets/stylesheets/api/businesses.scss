@@ -5,6 +5,8 @@
 header.header-nav {
   display: flex;
   justify-content: space-between;
+  width: 100vw;
+  height: 3em;
   background: rgba(69, 115, 147, 1);
   // border: 2px solid rgba(169,240,255, 0.25);
   align-items: center;
@@ -18,21 +20,24 @@ header.header-nav {
     1px -1px 0 rgba(0, 0, 0, 0.75),
     -1px 1px 0 rgba(0, 0, 0, 0.75),
     1px 1px 0 rgba(0, 0, 0, 0.75);
-  // color: rgba(208,247,255, 1);
-  // color: #060c0d;
-  // text-shadow:
-  //   -1px -1px 0 rgba(0, 0, 0, 0.75),
-  //   1px -1px 0 rgba(0, 0, 0, 0.75),
-  //   -1px 1px 0 rgba(0, 0, 0, 0.75),
-  //   1px 1px 0 rgba(0, 0, 0, 0.75);
-  // -webkit-text-fill-color: rgba(208,247,255, 1); /* Will override color (regardless of order) */
-  // -webkit-text-stroke-width: 1px;
-  // -webkit-text-stroke-color: black;
 }
 
-// .business-index {
-//   height: 100%;
-// }
+
+header.header-nav > div {
+  margin: 0 50px;
+}
+
+header.header-nav {
+  margin: 0 50px;
+}
+
+.header-nav-logo:hover {
+  color: #d1eefe;
+}
+
+.header-nav-logo {
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, color 0.4s ease-in-out;
+}
 
 .header-nav-logo img {
   height: 36px;
@@ -85,6 +90,7 @@ header.header-nav {
 
 section.businesses-content {
   display: flex;
+  justify-content: center;
   height: calc(100vh - 46px);
 }
 
@@ -122,12 +128,13 @@ section.sidebar-container {
     1px -1px 0 rgba(0, 0, 0, 0.75),
     -1px 1px 0 rgba(0, 0, 0, 0.75),
     1px 1px 0 rgba(0, 0, 0, 0.75);
+    transition: ease-out 0.4s;
 }
 
 .filter-tag:hover {
   background: rgba(228,250,255, 0.25);
   cursor: pointer;
-  transition: 1s ease;
+  transition: ease-in-out 0.4s;
 }
 
 .filter-tag-list a {
@@ -203,9 +210,9 @@ section.business-index-with-detailed-item {
 
 .business-index-item {
   padding: 10px;
-  // margin: 0 10px;
   border-bottom: 1px solid rgba(228,250,255, 0.15);
   border-top: 1px solid rgba(228,250,255, 0.15);
+  transition: ease-in-out 0.7s;
 }
 
 .business-index-item:first-child {
@@ -248,7 +255,7 @@ section.business-index-with-detailed-item {
 li.business-index-item:hover {
   cursor: pointer;
   background: rgba(41, 71, 95, 0.12);
-  transition: 0.7s ease;
+  transition: ease-in-out 0.7s;
 }
 
 .businesses-content {
@@ -314,10 +321,13 @@ li.business-index-item:hover {
   align-items: center;
   position: relative;
   margin: 3px 2px 2px 0;
+  font-size: 20px;
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-.header-profile-image-logout img:hover {
+.header-profile-image-logout:hover {
   cursor: pointer;
+  color: #d1eefe;
 }
 
 .header-profile-image-logout:hover .profile-links {
