@@ -5,12 +5,13 @@ export default class Session extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false;
+      show: false
     }
   }
 
   componentDidMount() {
-    this.setState({ show: true })
+    // this.setState({ show: true });
+    setTimeout(() => this.setState({ show: true }), 0);
   }
 
   render() {
