@@ -127,18 +127,32 @@ button:hover {
   background: rgba(228,250,255, 0.25);
 }
 
-textarea, input[type="text"] {
-  background: rgba(22, 28, 29, 0.5);
-  border: 2px solid rgba(169,240,255, 0.3);
+textarea, .session-form input[type="text"] {
+  background: inherit;
+  border: none;
+  border-radius: 3px;
+  border-left: 2px solid rgba(169,240,255, 0.3);
+  border-bottom: 2px solid rgba(169,240,255, 0.3);
   color: rgba(208,247,255, 0.75);
   margin: 5px;
-  padding: 2.5px;
+  padding: 5px;
   font-size: 14px;
   width: 180px;
+  transition: border 0.5s;
+}
+//   background: rgba(22, 28, 29, 0.5);
+
+.session input:hover {
+  outline: none;
+  border-left: solid 2px #b9dbe2;
+  border-bottom: solid 2px #b9dbe2;
 }
 
 .session input:focus {
-  outline-width: 1.5px;
+  outline: none;
+  transition: 1s;
+  border-left: solid 2px #879fa5;
+  border-bottom: solid 2px #879fa5;
 }
 
 .session label {
