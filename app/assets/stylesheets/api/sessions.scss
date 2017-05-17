@@ -127,6 +127,7 @@ button:hover {
   background: rgba(228,250,255, 0.25);
 }
 
+
 textarea, .session-form input[type="text"] {
   background: inherit;
   border: none;
@@ -141,6 +142,11 @@ textarea, .session-form input[type="text"] {
   transition: border 0.5s;
 }
 //   background: rgba(22, 28, 29, 0.5);
+input[type="text"] {
+  padding: 7.5px;
+  border: 2px rgba(169,240,255, 0.3);
+  background: rgba(22, 28, 29, 0.5);
+}
 
 .session input:hover {
   outline: none;
