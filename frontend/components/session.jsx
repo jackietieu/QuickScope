@@ -10,7 +10,6 @@ export default class Session extends React.Component {
   }
 
   componentDidMount() {
-    // this.setState({ show: true });
     setTimeout(() => this.setState({ show: true }), 0);
   }
 
