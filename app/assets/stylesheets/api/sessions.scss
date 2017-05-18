@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .splash-text.visible {
-  transition: opacity 2s;
+  transition: opacity 2.5s;
   opacity: 1;
 }
 
@@ -97,13 +97,12 @@ div.guest-login-container {
   justify-content: center;
 }
 
-form.session-form {
-  margin: 10px 20px;
+div.guest-login-container button {
+  width: 8em;
 }
 
-div.login-signup-buttons {
-  display: flex;
-  justify-content: space-around;
+form.session-form {
+  margin: 10px 20px;
 }
 
 button {
@@ -122,24 +121,21 @@ button {
     1px 1px 0 rgba(0, 0, 0, 0.25);
   font-size: 14px;
   font-family: 'Source Sans Pro', sans-serif;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: all 0.3s ease 0s;
+}
+
+div.login-signup-buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 .session-form-container button {
   height: 2.5em;
-  width: 7em;
+  width: 6em;
+  letter-spacing: 0.5px;
+  font-size: 16px;
 }
-
-div.login-signup-buttons button {
-  width: 70px;
-}
-
-button:hover {
-  cursor: pointer;
-  background: rgba(228,250,255, 0.25);
-}
-
 
 textarea, .session-form input[type="text"] {
   background: inherit;
@@ -163,15 +159,20 @@ input[type="text"] {
 
 .session input:hover {
   outline: none;
-  border-left: solid 2px #b9dbe2;
-  border-bottom: solid 2px #b9dbe2;
+  border-left: solid 2px #879fa5;
+  border-bottom: solid 2px #879fa5;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgba(228,250,255, 0.25);
 }
 
 .session input:focus {
   outline: none;
+  border-left: solid 2px #b9dbe2;
+  border-bottom: solid 2px #b9dbe2;
   transition: 1s;
-  border-left: solid 2px #879fa5;
-  border-bottom: solid 2px #879fa5;
 }
 
 .session label {
