@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// .new-review-form .dv-star-rating-star i {
+//   color: black;
+// }
+
 section.review-index-container {
   display: flex;
   flex-direction: column;
@@ -99,4 +103,18 @@ input[type=radio]:hover {
 
 .review-create-plus {
   margin: 0 0 0 5px;
+}
+// .new-review-form .dv-star-rating-star i {
+//   will-change: color;
+// }
+
+.new-review-form .dv-star-rating-star:hover ~ .dv-star-rating-star,
+.new-review-form .dv-star-rating-star:hover {
+  color: rgb(255, 180, 0);
+  transition: ease-in-out 0.5s;
+  text-shadow:
+    -1px -1px 0.5px #b9dbe2,
+    1px -1px 0.5px #b9dbe2,
+    -1px 1px 0.5px #b9dbe2,
+    1px 1px 0.5px #b9dbe2;
 }

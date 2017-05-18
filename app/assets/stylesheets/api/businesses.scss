@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.dv-star-rating-star i {
+  -webkit-text-stroke: 0.7px black;
+  font-size: 14px;
+  margin: 0 1px;
+}
+
 header.header-nav {
   display: flex;
   justify-content: space-between;
