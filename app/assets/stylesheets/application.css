@@ -74,12 +74,14 @@
   text-decoration: none;
   border: 2px solid rgba(169,240,255, 0.25);
 }
+
 main#root {
   display: flex;
   justify-content: center;
   background: url('http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,w_1920/v1473099416/photo-1471110338536-858caa3dbe45_hckeda.jpg') no-repeat;
   background-size: cover;
 }
+
 html, body {
   font-family: 'Source Sans Pro', sans-serif;;
   height: 100%;

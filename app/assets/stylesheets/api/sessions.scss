@@ -10,7 +10,7 @@
 .splash-text {
   opacity: 0;
   font-size: 36px;
-  margin-top: 5%;
+  margin: 15vh 0 10vh 0;
   text-align: center;
   color: rgba(208,247,255, 0.9);
   text-shadow:
@@ -29,9 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   color: rgba(208,247,255, 0.8);
-  height: 100vh;
   width: 100vw;
 }
 
@@ -49,10 +47,10 @@
   align-items: center;
   justify-content: space-around;
   border: 2px solid rgba(169,240,255, 0.1);
-  height: 176px;
-  min-height: 176px;
+  // height: 176px;
+  min-height: 216px;
   // width: 496px;
-  width: 560px;
+  width: 570px;
   text-shadow:
     1px 1px 1px #000,
     -1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -69,7 +67,7 @@
 div.splash-content {
   display: flex;
   flex-direction: column;
-  margin: 10px 0 10px 10px;
+  margin: 10px;
 }
 
 
@@ -88,7 +86,7 @@ div.session-form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px 0 10px 15px;
+  margin: 10px 10px 10px 15px;
   border-left: 2px solid rgba(169,240,255, 0.1);
 }
 
@@ -99,10 +97,11 @@ div.guest-login-container {
 
 div.guest-login-container button {
   width: 8em;
+  margin: 0 0 0 10px;
 }
 
 form.session-form {
-  margin: 10px 20px;
+  margin: 20px 20px 20px 30px;
 }
 
 button {
@@ -128,6 +127,7 @@ button {
 div.login-signup-buttons {
   display: flex;
   justify-content: space-around;
+  margin: 0 0 0 10px;
 }
 
 .session-form-container button {
@@ -148,6 +148,7 @@ textarea, .session-form input[type="text"] {
   padding: 5px;
   font-size: 14px;
   width: 180px;
+  letter-spacing: 0.5px;
   transition: border 0.5s;
 }
 //   background: rgba(22, 28, 29, 0.5);
