@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .new-review-form .dv-star-rating-star i {
-//   color: black;
-// }
-
 section.review-index-container {
   display: flex;
   flex-direction: column;
@@ -63,6 +59,11 @@ section.review-index-container {
   height: 80px;
   margin: 0 0 5px 0;
   background: #2b4251;
+  border-radius: 3px;
+  border-left: 2px solid rgba(169,240,255, 0.3);
+  border: 2px solid rgba(169,240,255, 0.3);
+  color: rgba(208,247,255, 0.75);
+  font-size: 14px;
 }
 
 .new-review-form button {
