@@ -34,42 +34,44 @@ class SessionForm extends React.Component{
 
   guestLogin(e){
     e.preventDefault();
-    let counter = 0,
-        counter2 = 0;
-    const form = this.props['signup'],
-          date = new Date,
-          currentTime = date.getTime(),
-          guest = 'Guest'.concat(currentTime);
+    this.setState({ username: '', password: ''}, () => {
+      let counter = 0,
+      counter2 = 0;
+      const form = this.props['signup'],
+      date = new Date,
+      currentTime = date.getTime(),
+      guest = 'Guest'.concat(currentTime);
 
-    const user = {
-      username: `${guest}`,
-      password: '123456'
-    };
+      const user = {
+        username: `${guest}`,
+        password: '123456'
+      };
 
-    setInterval(() => {
-      if (counter === 5) {
-        clearTimeout();
-      } else if (counter < 5) {
-        this.setState({ username: this.state.username + 'guest'[counter]});
-      }
-      counter++;
-    }, 100)
+      let interval1 = setInterval(() => {
+        if (counter === 5) {
+          clearInterval(interval1);
+        } else if (counter < 5) {
+          this.setState({ username: this.state.username + 'guest'[counter]});
+        }
+        counter++;
+      }, 100)
 
-    setTimeout(
-      () => {
-        counter2 = 0;
-        setInterval(() => {
-          if (counter2 === 6) {
-            clearTimeout();
-          } else if (counter2 < 6) {
-            this.setState({ password: this.state.password + user.password[counter2]});
-          }
-          counter2++;
-        }, 100)
-      }
-    , 700)
+      setTimeout(
+        () => {
+          counter2 = 0;
+          let interval2 = setInterval(() => {
+            if (counter2 === 6) {
+              clearInterval(interval2);
+            } else if (counter2 < 6) {
+              this.setState({ password: this.state.password + user.password[counter2]});
+            }
+            counter2++;
+          }, 100)
+        }
+        , 700)
 
-    setTimeout(() => form({user}), 1500);
+        setTimeout(() => form({user}), 1500);
+    })
   }
 
   update(property){
