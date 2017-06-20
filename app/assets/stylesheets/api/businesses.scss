@@ -93,13 +93,14 @@ section.businesses-content {
   justify-content: center;
   background: #042d36;
   height: calc(100vh - 50px);
+  min-height: 487px;
 }
 
 section.sidebar-container {
   text-align: center;
   margin: 10px 0 0 0;
   background: rgba(69, 115, 147, 1);
-  height: 491px;
+  height: 487px;
   width: 250px;
   border: 2px solid rgba(169,240,255, 0.25);
   box-shadow:
@@ -158,6 +159,7 @@ section.business-index-with-detailed-item {
   min-width: 420px;
   max-width: 520px;
   color: #0b141a;
+  min-height: 487px;
   // color: rgba(208,247,255, 0.8);
   // text-shadow:
   //   -1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -222,6 +224,7 @@ section.business-index-with-detailed-item {
 
 
 .business-index-list {
+  min-height: 477px;
   height: 91.9vh;
   overflow-y: scroll;
   background: #7c99aa;

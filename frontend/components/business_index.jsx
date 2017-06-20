@@ -8,11 +8,13 @@ class BusinessIndex extends React.Component{
   }
 
   render(){
-    let detailedBusiness;
-    let scrollIntro;
-    let businesses = [];
+    let businesses = [],
+        detailedBusiness,
+        scrollIntro,
+        styleProp,
+        minHeight = "height: 487px";
+
     const businessIds = Object.keys(this.props.businesses);
-    let styleProp;
 
     if (businessIds.length > 0) {
       businessIds.forEach((businessId, idx) => {
@@ -53,7 +55,8 @@ class BusinessIndex extends React.Component{
       </li>;
     }
 
-    styleProp = (detailedBusiness === undefined ? {"height":"89.2vh", "margin":"10px 0 0 10px"} : {"height":"calc(100vh - 290px"});
+
+    styleProp = (detailedBusiness === undefined ? {"height":"calc(100vh - 50px)"} : {"height":"calc(100vh - 290px"});
 
     return (
       <section className="business-index-with-detailed-item">
