@@ -56,12 +56,6 @@ header.header-nav {
   align-items: center;
   font-weight: bold;
   font-size: 24px;
-  // color: #d1eefe;
-  // text-shadow:
-  //   -1px -1px 0 rgba(0, 0, 0, 0.75),
-  //   1px -1px 0 rgba(0, 0, 0, 0.75),
-  //   -1px 1px 0 rgba(0, 0, 0, 0.75),
-  //   1px 1px 0 rgba(0, 0, 0, 0.75);
 }
 
 .header-profile-image-logout img {
@@ -97,7 +91,8 @@ header.header-nav {
 section.businesses-content {
   display: flex;
   justify-content: center;
-  height: calc(100vh - 46px);
+  background: #042d36;
+  height: calc(100vh - 50px);
 }
 
 section.sidebar-container {

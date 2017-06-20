@@ -74,12 +74,10 @@
   text-decoration: none;
   border: 2px solid rgba(169,240,255, 0.25);
 }
-
 main#root {
   display: flex;
   justify-content: center;
 }
-
 html, body {
   font-family: 'Source Sans Pro', sans-serif;;
   height: 100%;
