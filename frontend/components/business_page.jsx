@@ -3,15 +3,11 @@ import { hashHistory, withRouter } from 'react-router';
 import BusinessIndexContainer from './business_index_container';
 import SidebarContainer from './sidebar_container';
 import ReviewIndexContainer from './review_index_container';
+import HeaderContainer from './header_container';
 
-class BusinessPage extends React.Component{
+class BusinessPage extends React.Component {
   constructor(props){
     super(props);
-  }
-
-  handleClick(e){
-    e.preventDefault();
-    this.props.logout();
   }
 
   componentDidMount(){
@@ -24,33 +20,10 @@ class BusinessPage extends React.Component{
     }
   }
 
-  handleLogoClick(e){
-    this.props.router.push("/businesses/0");
-    this.props.requestBusinesses({search:"", filterId:0});
-  }
-
   render(){
-    let header =
-      <header className="header-nav">
-        <div className="header-nav-logo" onClick={this.handleLogoClick.bind(this)}>
-          <img src="http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,w_151/v1473377274/noun_581513_cc_pwvcxa.png" />
-          <div className="header-logo-name">
-            QuickScope
-          </div>
-        </div>
-        <div className="header-links">
-          <div className="header-user-profile">
-            <div className="header-profile-image-logout"
-              onClick={this.handleClick.bind(this)}>
-              Logout
-            </div>
-          </div>
-        </div>
-      </header>;
-
     return (
       <section className="main-page">
-        {header}
+        <HeaderContainer props={this.props} />
         <section className="businesses-content">
           <SidebarContainer filterId={this.props.filterId} businessId={this.props.params.businessId} />
           <BusinessIndexContainer filterId={this.props.filterId} businessId={this.props.params.businessId} />
