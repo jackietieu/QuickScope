@@ -14,7 +14,6 @@ header.header-nav {
   width: 100vw;
   height: 3em;
   background: rgba(69, 115, 147, 1);
-  // border: 2px solid rgba(169,240,255, 0.25);
   align-items: center;
   color: #0b141a;
   position: relative;
@@ -92,7 +91,7 @@ section.businesses-content {
   display: flex;
   justify-content: center;
   background: #042d36;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 65px);
   min-height: 487px;
 }
 
@@ -111,7 +110,6 @@ section.sidebar-container {
 }
 
 .sidebar-container input[type="text"] {
-  // margin: 20px 0 0 0;
   width: 180px;
   border-radius: 5px;
   height: 24px;
@@ -122,7 +120,6 @@ section.sidebar-container {
   text-decoration: none;
   text-align: center;
   padding: 5px 0;
-  // color: rgba(208,247,255, 0.85);
   color: #d1eefe;
   text-shadow:
     1px 1px 1px #000,
@@ -159,24 +156,13 @@ section.business-index-with-detailed-item {
   min-width: 420px;
   max-width: 520px;
   color: #0b141a;
+  max-height: calc(100vh - 65px);
   min-height: 487px;
-  // color: rgba(208,247,255, 0.8);
-  // text-shadow:
-  //   -1px -1px 0 rgba(0, 0, 0, 0.75),
-  //   1px -1px 0 rgba(0, 0, 0, 0.75),
-  //   -1px 1px 0 rgba(0, 0, 0, 0.75),
-  //   1px 1px 0 rgba(0, 0, 0, 0.75);
   text-shadow:
     -1px -1px 0 rgba(208,247,255, 0.05),
     1px -1px 0 rgba(208,247,255, 0.05),
     -1px 1px 0 rgba(208,247,255, 0.05),
     1px 1px 0 rgba(208,247,255, 0.05);
-  // text-shadow:
-  //   -1px -1px 0 rgba(199,178,155, 0.1),
-  //   1px -1px 0 rgba(199,178,155, 0.1),
-  //   -1px 1px 0 rgba(199,178,155, 0.1),
-  //   1px 1px 0 rgba(199,178,155, 0.1);
-
   font-size: 12px;
 }
 
@@ -203,7 +189,6 @@ section.business-index-with-detailed-item {
 .business-index-item-data-field {
   display: flex;
   justify-content: space-between;
-  // background: rgba(124, 153, 170, 0.9);
 }
 
 .business-index-item-address {
@@ -293,10 +278,6 @@ li.business-index-item:hover {
   margin: 5px 0 0 0;
 }
 
-// .header-user-profile > li {
-//   position: relative;
-// }
-
 .profile-links {
   display: none;
   position: absolute;
@@ -343,9 +324,7 @@ li.business-index-item:hover {
 }
 
 .fa-search {
-  // color: rgba(208,247,255, 0.85);
   color: #0b141a;
-  // color: #0b141a;
   margin: 0 0 0 5px;
 }
 
