@@ -19,8 +19,8 @@ section.review-index-container {
 }
 
 .review-index-items {
-  overflow-y: scroll;
-  height: 82.5vh;
+  overflow-y: auto;
+  height: calc(100vh - 285px);
   padding: 10px;
   background: #7c99aa;
   // text-shadow:
