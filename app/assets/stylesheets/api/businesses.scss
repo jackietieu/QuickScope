@@ -64,8 +64,8 @@ header.header-nav > div {
   cursor: pointer;
 }
 
-.header-welcome {
-
+.business-reviews {
+  font-size: 12pt;
 }
 
 .header-user-profile {
@@ -94,8 +94,8 @@ section.sidebar-container {
   text-align: center;
   margin: 10px 0 0 0;
   background: rgba(69, 115, 147, 1);
-  height: 491px;
-  width: 250px;
+  height: 630px;
+  width: 350px;
   border: 2px solid rgba(169,240,255, 0.25);
   box-shadow:
     -1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -113,6 +113,7 @@ section.sidebar-container {
 }
 
 .filter-tag {
+  font-size: 22px;
   text-decoration: none;
   text-align: center;
   padding: 5px 0;
@@ -174,7 +175,7 @@ section.business-index-with-detailed-item {
 }
 
 .business-index-item-name {
-  font-size: 16px;
+  font-size: 20px;
   margin: 0 10px 10px 0;
 }
 
