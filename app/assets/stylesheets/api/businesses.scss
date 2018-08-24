@@ -196,7 +196,6 @@ section.business-index-with-detailed-item {
 .business-index-item-data-field {
   display: flex;
   justify-content: space-between;
-  // background: rgba(124, 153, 170, 0.9);
 }
 
 .business-index-item-address {
@@ -217,7 +216,7 @@ section.business-index-with-detailed-item {
 
 
 .business-index-list {
-  height: 91.9vh;
+  height: calc(100vh - 70px);
   overflow-y: scroll;
   background: #7c99aa;
   border-top: 1px solid rgba(169,240,255, 0.25);
