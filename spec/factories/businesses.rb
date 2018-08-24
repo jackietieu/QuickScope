@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :business do
     name 'ice cream shop'
     lat 0
