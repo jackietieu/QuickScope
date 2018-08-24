@@ -77,14 +77,16 @@
 main#root {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 html, body {
-  font-family: 'Source Sans Pro', sans-serif;;
+  font-family: 'Source Sans Pro', sans-serif;
   height: 100%;
   background: rgba(41, 71, 95, 0.8);
-  background: url('http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,w_1920/v1473099416/photo-1471110338536-858caa3dbe45_hckeda.jpg') no-repeat;
+  height: 100%;
+  /* background: url('http://res.cloudinary.com/dnmknegr2/image/upload/c_scale,w_1920/v1473099416/photo-1471110338536-858caa3dbe45_hckeda.jpg') no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 .main-app {
   height: 100%;
