@@ -67,13 +67,6 @@
   clear: both;
   display: block;
 }
-#map-container {
-  margin: 20px 0 0 0;
-  width: 346px;
-  height: 354px;
-  text-decoration: none;
-  border: 2px solid rgba(169,240,255, 0.25);
-}
 main#root {
   display: flex;
   justify-content: center;

@@ -59,7 +59,9 @@ class Sidebar extends React.Component{
           <form>
             <label>
               <div className="search-box">
-                <input type="text"
+                <input 
+                  id="sidebar-search-input"
+                  type="text"
                   value={this.state.search}
                   onChange={this.update.bind(this)}
                   placeholder="Quick search..." />

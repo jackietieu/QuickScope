@@ -20,7 +20,7 @@ section.review-index-container {
 
 .review-index-items {
   overflow-y: auto;
-  height: calc(100vh - 285px);
+  max-height: calc(100vh - 320px);
   padding: 10px;
   background: #7c99aa;
   // text-shadow:
@@ -55,8 +55,8 @@ section.review-index-container {
 }
 
 .new-review-form textarea {
-  width: 95.5%;
-  height: 80px;
+  width: 94%;
+  height: 116px;
   margin: 0 0 5px 0;
   background: #2b4251;
   border-radius: 3px;
@@ -79,6 +79,11 @@ section.review-index-container {
 
 .review-index-item:first-child {
   padding: 0 0 10px 0;
+}
+
+.review-index-item:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .review-profile-picture {
