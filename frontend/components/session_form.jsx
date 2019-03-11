@@ -85,7 +85,7 @@ class SessionForm extends React.Component{
           <button className="guest-login-button"
             type="submit"
             id="guestLogin"
-            onClick={this.guestLogin.bind(this)}>Guest Login</button>
+            onClick={this.guestLogin.bind(this)}>GUEST LOGIN</button>
         </div>
 
         <form className="session-form">
@@ -108,11 +108,11 @@ class SessionForm extends React.Component{
           <button className="login-button"
                   type="submit"
                   id="login"
-                  onClick={this.handleClick}>Login</button>
+                  onClick={this.handleClick}>LOGIN</button>
           <button className="signup-button"
                   type="submit"
                   id="signup"
-                  onClick={this.handleClick}>Signup</button>
+                  onClick={this.handleClick}>SIGNUP</button>
         </div>
       </div>
     );

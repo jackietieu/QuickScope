@@ -7,13 +7,21 @@
   opacity: 1;
 }
 
+.session.card {
+  background-color: #19454f;
+}
+
 .splash-text {
   opacity: 0;
   font-size: 48px;
   margin: 15vh 20px 10vh 20px;  
   text-align: center;
-  color: rgba(208,247,255, 0.9);
-  text-shadow: 1px 1px 1px #000, -2px -2px 0 rgba(0, 0, 0, 0.75), 2px -2px 0 rgba(0, 0, 0, 0.75), -2px 2px 0 rgba(0, 0, 0, 0.75), 2px 2px 0 rgba(0, 0, 0, 0.75);
+  color: white;
+  text-shadow: 
+    3px 3px 3px rgba(0, 0, 0, 0.8),
+    -3px -3px 3px rgba(0, 0, 0, 0.8), 
+    3px -3px 3px rgba(0, 0, 0, 0.8), 
+    -3px 3px 3px rgba(0, 0, 0, 0.8);
   opacity: 0;
   will-change: opacity;
 }
@@ -34,8 +42,8 @@
   height: 100%;
 }
 
-.splash-title {
-  font-size: 36px;
+h1.splash-title.card-title {
+  font-size: 42px;
 }
 
 .session {
@@ -51,7 +59,7 @@
   // height: 176px;
   min-height: 216px;
   // width: 496px;
-  width: 600px;
+  width: 640px;
   text-shadow:
     1px 1px 1px #000,
     -1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -65,7 +73,7 @@
     1px 1px 0 rgba(0, 0, 0, 0.75);
 }
 
-div.splash-content {
+div.splash-content.card-content {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -78,10 +86,11 @@ h1.splash-title {
   margin: 10px;
 }
 
-p.splash-description {
+p.splash-description.card-content {
   text-align: right;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
   font-size: 18px;
+  padding: 0;
 }
 
 div.session-form-container {
@@ -89,6 +98,7 @@ div.session-form-container {
   flex-direction: column;
   justify-content: center;
   margin: 10px 10px 10px 15px;
+  padding-left: 10px;
   border-left: 2px solid rgba(169,240,255, 0.1);
 }
 
@@ -132,10 +142,14 @@ div.login-signup-buttons {
   margin: 0 0 0 10px;
 }
 
+.login-signup-buttons button {
+  margin: 0 10px;
+}
+
 .session-form-container button {
   height: 2.5em;
   width: 6em;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
   font-size: 16px;
 }
 

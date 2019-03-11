@@ -19,14 +19,14 @@ export default class Session extends React.Component {
     return (
       <div className="splash-background-fill">
         <section className="session-splash">
-          <div className={`splash-text ${show}`}>Discover great businesses that are waiting around the corner!</div>
+          <h1 className={`splash-text ${show}`}>Discover great businesses that are waiting around the corner!</h1>
 
-          <div className="session">
+          <div className="session card">
             <div className="splash-content">
-              <h1 className="splash-title">
+              <h1 className="splash-title card-title">
                 QuickScope
               </h1>
-              <p className="splash-description">
+              <p className="splash-description card-content">
                 Login or signup to quickly scope out local businesses and post reviews!
               </p>
             </div>
