@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import ReviewIndex from './review_index';
 import { requestReviews, createReview } from '../actions/review_actions';
-// import { requestBusinesses } from '../util/business_api_util';
 
 const mapStateToProps = (state, ownProps) => ({
   reviews: state.reviews,

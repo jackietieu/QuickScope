@@ -64,7 +64,7 @@ class Sidebar extends React.Component{
                   type="text"
                   value={this.state.search}
                   onChange={this.update.bind(this)}
-                  placeholder="Quick search..." />
+                  placeholder="Search businesses..." />
                 <i className="fa fa-search fa-2x" aria-hidden="true"></i>
               </div>
             </label>

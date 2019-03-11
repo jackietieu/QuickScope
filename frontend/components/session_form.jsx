@@ -82,7 +82,8 @@ class SessionForm extends React.Component{
     return (
       <div className="session-form-container">
         <div className="guest-login-container">
-          <button className="guest-login-button"
+          <button 
+            className="guest-login-button waves-effect waves-light btn"
             type="submit"
             id="guestLogin"
             onClick={this.guestLogin.bind(this)}>GUEST LOGIN</button>
@@ -90,29 +91,33 @@ class SessionForm extends React.Component{
 
         <form className="session-form">
           <label>
-            <input type="text"
-                   placeholder="Username"
-                   value={this.state.username}
-                   onChange={this.update('username')} />
+            <input 
+              type="text"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.update('username')} />
           </label>
           <label>
             <br />
-            <input type="text"
-                   placeholder="Password"
-                   value={this.state.password.split('').map(char => '*').join('')}
-                   onChange={this.update('password')} />
+            <input 
+              type="text"
+              placeholder="Password"
+              value={this.state.password.split('').map(char => '*').join('')}
+              onChange={this.update('password')} />
           </label>
         </form>
 
         <div className="login-signup-buttons">
-          <button className="login-button"
-                  type="submit"
-                  id="login"
-                  onClick={this.handleClick}>LOGIN</button>
-          <button className="signup-button"
-                  type="submit"
-                  id="signup"
-                  onClick={this.handleClick}>SIGNUP</button>
+          <button 
+            className="login-button waves-effect waves-light btn"
+            type="submit"
+            id="login"
+            onClick={this.handleClick}>LOGIN</button>
+          <button 
+            className="signup-button waves-effect waves-light btn"
+            type="submit"
+            id="signup"
+            onClick={this.handleClick}>SIGNUP</button>
         </div>
       </div>
     );

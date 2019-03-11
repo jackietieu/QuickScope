@@ -16,6 +16,7 @@ section.review-index-container {
 
 .review-index-container img {
   margin-right: 5px;
+  height: 48px;
 }
 
 .review-index-items {
@@ -56,7 +57,7 @@ section.review-index-container {
 
 .new-review-form textarea {
   width: 94%;
-  height: 116px;
+  height: 102px;
   margin: 0 0 5px 0;
   background: #2b4251;
   border-radius: 3px;
@@ -96,7 +97,7 @@ section.review-index-container {
 }
 
 .review-content {
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
 }
 
 input[type=radio]:hover {
@@ -107,8 +108,8 @@ input[type=radio]:hover {
   display: flex;
 }
 
-.review-create-plus {
-  margin: 0 0 0 5px;
+.create-review-icon {
+  margin: 0 0 0 15px;
 }
 // .new-review-form .dv-star-rating-star i {
 //   will-change: color;
@@ -124,3 +125,4 @@ input[type=radio]:hover {
     -1px 1px 0.5px #b9dbe2,
     1px 1px 0.5px #b9dbe2;
 }
+

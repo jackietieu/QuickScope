@@ -69,25 +69,26 @@ class ReviewIndex extends React.Component{
           Make a review for this business!
           <br />
             <StarRatingComponent
-                name="review-form-rating-0"
-                key={this.state.rating}
-                starCount={5}
-                value={this.state.rating}
-                onStarClick={this.onStarClick.bind(this)}
+              name="review-form-rating-0"
+              key={this.state.rating}
+              starCount={5}
+              value={this.state.rating}
+              onStarClick={this.onStarClick.bind(this)}
               />
           <label>
-            <textarea value={this.state.content}
-                      placeholder="Review content..."
-                      onChange={this.update('content')}></textarea>
+            <textarea 
+              value={this.state.content}       
+              placeholder="Review content..."
+              onChange={this.update('content')}></textarea>
           </label>
           <br />
-          <button type="submit" value="Create Review" disabled={disabled}>
-            <div className="complete-review-create-button">
+          <button
+            className="waves-effect waves-light btn"
+            type="submit" 
+            value="Create Review" 
+            disabled={disabled}>
               <span>Create Review</span>
-              <div className="review-create-plus">
-                <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
-              </div>
-            </div>
+              <i className="create-review-icon fas fa-pencil-alt"></i>
           </button>
         </form>
         <div className="review-index-items">
