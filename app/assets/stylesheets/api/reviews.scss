@@ -8,7 +8,7 @@ section.review-index-container {
   word-wrap: break-word;
   height: auto;
   min-width: 200px;
-  max-width: 250px;
+  max-width: 280px;
   // background: #29475f;
   margin: 10px 0 0 0;
   color: #0b141a;
@@ -16,7 +16,7 @@ section.review-index-container {
 
 .review-index-container img {
   margin-right: 5px;
-  height: 48px;
+  height: 52px;
 }
 
 .review-index-items {
@@ -40,7 +40,7 @@ section.review-index-container {
 .new-review-form {
   padding: 10px;
   margin: 0 0 10px 0;
-  font-size: 14px;
+  font-size: 16px;
   background: #7c99aa;
   // text-shadow:
   //   -1px -1px 0 rgba(0, 0, 0, 0.75),
@@ -57,14 +57,14 @@ section.review-index-container {
 
 .new-review-form textarea {
   width: 94%;
-  height: 102px;
+  height: 101px;
   margin: 0 0 5px 0;
   background: #2b4251;
   border-radius: 3px;
   border-left: 2px solid rgba(169,240,255, 0.3);
   border: 2px solid rgba(169,240,255, 0.3);
   color: rgba(208,247,255, 0.75);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .new-review-form button {
@@ -98,6 +98,11 @@ section.review-index-container {
 
 .review-content {
   margin: 15px 0 0 0;
+  font-size: 18px;
+}
+
+.review-details {
+  font-size: 16px;
 }
 
 input[type=radio]:hover {
