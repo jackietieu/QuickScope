@@ -38,7 +38,7 @@
     "react-router": "^2.7.0",
     "react-star-rating-component": "^1.0.0",
     "redux": "^3.5.2",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^2.0.10"
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
   }
 }
